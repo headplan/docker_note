@@ -113,7 +113,7 @@ brew cask install docker
 
 运行和正常运行Mac工具一样.
 
-> _在国内使用 Docker 的话，需要配置加速器，在菜单中点击`Preferences...`，然后查看`Advanced`标签，在其中的`Registry mirrors`部分里可以点击加号来添加加速器地址。_
+> _在国内使用 Docker 的话，需要配置加速器，在菜单中点击_`Preferences...`_，然后查看_`Advanced`_标签，在其中的_`Registry mirrors`_部分里可以点击加号来添加加速器地址。_
 
 **查看Docker版本**
 
