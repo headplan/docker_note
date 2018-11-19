@@ -1,18 +1,17 @@
 # 基本概念
 
-Docker 包括三个基本概念
+Docker的四大组成对象 :
 
-* 镜像（Image）
-* 容器（Container）
-* 仓库（Repository）
-
-理解了这三个概念,就理解了Docker的整个生命周期.
+* 镜像\(Image\)
+* 容器\(Container\)
+* 网络\(Network\)
+* 数据卷\(Volume\)
 
 ### **Docker镜像**
 
-操作系统分为内核和用户空间.Linux内核启动后,会挂载root文件系统为其提供用户空间支持.Docker镜像就相当于是一个root文件系统.
+所谓镜像 , 可以理解为一个只读的文件包 , 其中包含了**虚拟环境运行最原始文件系统的内容** . 
 
-但是Docker镜像比较特殊,除了提供容器运行所需程序,库,资源,配置等文件,还包含了一些为运行时准备的配置参数,例如匿名卷,环境变量,用户等等.不包含任何动态数据,构建之后不会改变.
+操作系统分为内核和用户空间 . Linux内核启动后,会挂载root文件系统为其提供用户空间支持 . Docker镜像就相当于是一个root文件系统 . 但是Docker镜像比较特殊 , 除了提供容器运行所需程序 , 库 , 资源 , 配置等文件 , 还包含了一些为运行时准备的配置参数 , 例如匿名卷 , 环境变量 , 用户等等 . 不包含任何动态数据 , 构建之后不会改变 . 
 
 #### 分层存储概念
 
@@ -44,49 +43,47 @@ Docker 包括三个基本概念
 
 类似Github服务.
 
-官方公开服务:https://hub.docker.com/
+官方公开服务:[https://hub.docker.com/](https://hub.docker.com/)
 
-CoreOS:https://quay.io/
+CoreOS:[https://quay.io/](https://quay.io/)
 
 > CoreOS是一个基于Linux内核的支持Docker的发行版系统,但是后来CoreOS又发布了自己的容器引擎Rocket
 
-Google:https://cloud.google.com/container-registry/
+Google:[https://cloud.google.com/container-registry/](https://cloud.google.com/container-registry/)
 
-> http://kubernetes.io/的镜像使用的就是这个服务
+> [http://kubernetes.io/的镜像使用的就是这个服务](http://kubernetes.io/的镜像使用的就是这个服务)
 
 ##### Docker Hub的镜像加速器
 
-阿里云加速器:https://cr.console.aliyun.com/\#/accelerator
+阿里云加速器:[https://cr.console.aliyun.com/\#/accelerator](https://cr.console.aliyun.com/#/accelerator)
 
-DaoCloud加速器:https://www.daocloud.io/mirror\#accelerator-doc
+DaoCloud加速器:[https://www.daocloud.io/mirror\#accelerator-doc](https://www.daocloud.io/mirror#accelerator-doc)
 
-灵雀云加速器:http://docs.alauda.cn/feature/accelerator.html
+灵雀云加速器:[http://docs.alauda.cn/feature/accelerator.html](http://docs.alauda.cn/feature/accelerator.html)
 
 ##### 国内Docker Registry公开服务
 
-时速云镜像仓库:https://hub.tenxcloud.com/
+时速云镜像仓库:[https://hub.tenxcloud.com/](https://hub.tenxcloud.com/)
 
-网易云镜像服务:https://c.163.com/hub\#/m/library/
+网易云镜像服务:[https://c.163.com/hub\#/m/library/](https://c.163.com/hub#/m/library/)
 
-DaoCloud镜像市场:https://hub.daocloud.io/
+DaoCloud镜像市场:[https://hub.daocloud.io/](https://hub.daocloud.io/)
 
-阿里云镜像库:https://cr.console.aliyun.com
+阿里云镜像库:[https://cr.console.aliyun.com](https://cr.console.aliyun.com)
 
 #### 私有Docker Registry
 
 官方提供的Docker Registry镜像,可以直接使用作为私有的Registry服务:
 
-https://hub.docker.com/\_/registry/
+[https://hub.docker.com/\_/registry/](https://hub.docker.com/_/registry/)
 
 镜像API只提供了服务器端实现,但足以支持Docker命令,不影响使用.其他的图形界面,镜像维护,用户管理等高级功能由官方的商业化版本提供:
 
-https://docs.docker.com/datacenter/dtr/2.0/
+[https://docs.docker.com/datacenter/dtr/2.0/](https://docs.docker.com/datacenter/dtr/2.0/)
 
 当然还有第三方软件实现了Docker Registry API,提供了一些用户界面和高级功能:
 
-http://vmware.github.io/harbor/index\_cn.html
+[http://vmware.github.io/harbor/index\_cn.html](http://vmware.github.io/harbor/index_cn.html)
 
-https://www.sonatype.com/docker
-
-
+[https://www.sonatype.com/docker](https://www.sonatype.com/docker)
 
