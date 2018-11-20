@@ -83,9 +83,31 @@ docker version # 查看Client和Server两端的版本信息
 docker info # 查看Docker Engine相关信息
 ```
 
-可以看到正在运行的 Docker Engine 实例中运行的容器数量 , 存储的引擎等等 . 
+可以看到正在运行的 Docker Engine 实例中运行的容器数量 , 存储的引擎等等 .
 
 #### 配置国内镜像
 
+因为Docker提供的中央镜像仓库太慢 , 这里配置使用Docker提供的国内镜像 , 国内镜像仓库也有很多其他的 , 比如 , DaoCloud和阿里云等 . 
 
+修改json文件 , 不存在直接创建 . 
+
+```
+/etc/docker/daemon.json
+```
+
+```
+{
+    "registry-mirrors": [
+        "https://registry.docker-cn.com"
+    ]
+}
+```
+
+重启后配置生效
+
+```
+sudo systemctl restart docker
+```
+
+使用docker info查看Registry Mirrors是否存在 . 
 
