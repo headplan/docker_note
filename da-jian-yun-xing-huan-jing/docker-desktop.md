@@ -53,5 +53,15 @@ Docker 容器中能够通过数据卷的方式挂载宿主操作系统中的文�
 
 **网络配置**
 
-在 Docker for Mac 中的 Advanced 面板中 , 配置 Docker 内部默认网络的子网等 . 
+在 Docker for Mac 中的 Advanced 面板中 , 配置 Docker 内部默认网络的子网等 .
+
+**Docker daemon配置**
+
+在 Daemon 面板里 , 我们可以直接配置对 docker daemon 的运行配置进行调整 . 
+
+Basic里是图形化的Insecure registries 和 Registry mirrors 两个配置 , 分别用来配置未认证镜像仓库地址和镜像源地址 . 
+
+Advanced中可以直接配置daemon.json文件 . 
+
+
 
