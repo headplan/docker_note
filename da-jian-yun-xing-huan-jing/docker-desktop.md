@@ -35,9 +35,19 @@ Docker Desktop 实现容器化与 Docker Engine 是一致的 , 这就保证了�
 
 #### 主机文件挂载
 
-Docker 容器中能够通过数据卷的方式挂载宿主操作系统中的文件或目录 , 这里在宿主操作系统上的Linux是虚拟的系统 . 先将目录挂载到虚拟 Linux 系统上 , 再利用 Docker 挂载到容器之中 , Docker Desktop简化了这个流程 . 
+Docker 容器中能够通过数据卷的方式挂载宿主操作系统中的文件或目录 , 这里在宿主操作系统上的Linux是虚拟的系统 . 先将目录挂载到虚拟 Linux 系统上 , 再利用 Docker 挂载到容器之中 , Docker Desktop简化了这个流程 .
 
 ![](/assets/guazai.png)
 
+#### 配置Docker Desktop
 
+菜单中选择 Settings \( Windows \) 或 Preferences \( macOS \) . 
+
+**文件系统挂载配置**
+
+在 Docker for Windows 的 Shared Drivers 面板 , 以及在 Docker for Mac 中的 File Sharing 面板中 , 包含了之前提到的将本机目录挂载到 Hypervisor 里 Linux 系统中的配置 . 
+
+**资源控制配置**
+
+在 Advanced 面板中 , 可以调整 Docker 最大占用的本机资源 . 其实是在调整虚拟 Linux 环境所能占用的资源 , 是通过这个方式影响 Docker 所能占用的最大资源 . 
 
