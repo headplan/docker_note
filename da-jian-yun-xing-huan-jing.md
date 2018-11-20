@@ -15,7 +15,20 @@ Docker Engine的迭代版本分为稳定版和预览版 , 以发布的年月来�
 
 #### Docker的依赖环境
 
-基于 Linux kernel 3.10 以上版本的 Linux 系统来安装 Docker . 
+基于 Linux kernel 3.10 以上版本的 Linux 系统来安装 Docker .
+
+| 操作系统 | 支持的系统版本 |
+| :--- | :--- |
+| CentOS | CentOS 7 |
+| Debian | Debian Wheezy 7.7 \(LTS\) |
+|  | Debian Jessie 8 \(LTS\) |
+|  | Debian Stretch 9 |
+|  | Debian Buster 10 |
+| Fedora | Fedora 26 |
+|  | Fedora 27 |
+| Ubuntu | Ubuntu Trusty 14.04 |
+|  | Ubuntu Xenial 16.04 |
+|  | Ubuntu Artful 17.10 |
 
 
 
