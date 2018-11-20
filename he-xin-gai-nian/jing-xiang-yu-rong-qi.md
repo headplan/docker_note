@@ -58,3 +58,5 @@ Docker每次构建镜像的内容也就有所不同 , 具体体现就是镜像�
 
 ![](/assets/rongqideshengmingzhouqi.png)
 
+几个主要的状态 : Created , **Running** , Paused , Stopped , Deleted . 
+
