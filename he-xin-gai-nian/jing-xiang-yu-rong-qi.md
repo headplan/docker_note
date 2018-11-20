@@ -34,5 +34,11 @@ docker images
 * 创建时间\(CREATED\)
 * 占用空间\(SIZE\) - 非硬盘实际消耗的体积 , 比实际要小 , 因为多层复用继承的原因 . 
 
+**镜像命名**
+
+虽然镜像ID可以识别唯一性 , 但通过镜像命名识别镜像更容易一些 . REPOSITORY和TAG , 这两者其实就组成了 docker 对镜像的命名规则 . 
+
+![](/assets/jingxiangmingming.png)
+
 
 
