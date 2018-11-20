@@ -41,13 +41,17 @@ Docker 容器中能够通过数据卷的方式挂载宿主操作系统中的文�
 
 #### 配置Docker Desktop
 
-菜单中选择 Settings \( Windows \) 或 Preferences \( macOS \) . 
+菜单中选择 Settings \( Windows \) 或 Preferences \( macOS \) .
 
 **文件系统挂载配置**
 
-在 Docker for Windows 的 Shared Drivers 面板 , 以及在 Docker for Mac 中的 File Sharing 面板中 , 包含了之前提到的将本机目录挂载到 Hypervisor 里 Linux 系统中的配置 . 
+在 Docker for Windows 的 Shared Drivers 面板 , 以及在 Docker for Mac 中的 File Sharing 面板中 , 包含了之前提到的将本机目录挂载到 Hypervisor 里 Linux 系统中的配置 .
 
 **资源控制配置**
 
-在 Advanced 面板中 , 可以调整 Docker 最大占用的本机资源 . 其实是在调整虚拟 Linux 环境所能占用的资源 , 是通过这个方式影响 Docker 所能占用的最大资源 . 
+在 Advanced 面板中 , 可以调整 Docker 最大占用的本机资源 . 其实是在调整虚拟 Linux 环境所能占用的资源 , 是通过这个方式影响 Docker 所能占用的最大资源 .
+
+**网络配置**
+
+在 Docker for Mac 中的 Advanced 面板中 , 配置 Docker 内部默认网络的子网等 . 
 
