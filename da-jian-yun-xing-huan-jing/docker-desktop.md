@@ -57,11 +57,13 @@ Docker 容器中能够通过数据卷的方式挂载宿主操作系统中的文�
 
 **Docker daemon配置**
 
-在 Daemon 面板里 , 我们可以直接配置对 docker daemon 的运行配置进行调整 . 
+在 Daemon 面板里 , 我们可以直接配置对 docker daemon 的运行配置进行调整 .
 
-Basic里是图形化的Insecure registries 和 Registry mirrors 两个配置 , 分别用来配置未认证镜像仓库地址和镜像源地址 . 
+Basic里是图形化的Insecure registries 和 Registry mirrors 两个配置 , 分别用来配置未认证镜像仓库地址和镜像源地址 .
 
-Advanced中可以直接配置daemon.json文件 . 
+Advanced中可以直接配置daemon.json文件 .
 
+#### 低系统版本解决方案
 
+低配版本可以使用虚拟机VirtualBox配合Docker Toolbox解决 , 这里略过 ...
 
