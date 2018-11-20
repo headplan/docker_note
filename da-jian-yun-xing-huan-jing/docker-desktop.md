@@ -16,10 +16,14 @@ Docker Desktop 实现容器化与 Docker Engine 是一致的 , 这就保证了�
 
 > VirtualBox与Docker Desktop的兼容性不太好 , 尽量别同时用 .
 
-下载 : 
+下载 :
 
-* Windows - https://store.docker.com/editions/community/docker-ce-desktop-windows
-* MacOS - https://store.docker.com/editions/community/docker-ce-desktop-mac
+* Windows - [https://store.docker.com/editions/community/docker-ce-desktop-windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+* MacOS - [https://store.docker.com/editions/community/docker-ce-desktop-mac](https://store.docker.com/editions/community/docker-ce-desktop-mac)
 
 按照正常的方式安装即可 . 
+
+启动时图标鲸鱼上的集装箱会闪动 , 说明正在部署docker daemon所需要的一些环境并启动它 . 启动之后 , 可以在命令行中 , 试试`docker version`
+
+
 
