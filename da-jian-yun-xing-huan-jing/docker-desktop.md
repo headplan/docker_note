@@ -1,6 +1,6 @@
 # Docker Desktop
 
-Docker Desktop 实现容器化与 Docker Engine 是一致的 , 这就保证了我们在 Windows和macOS中开发所使用的环境可以很轻松的转移到其他的 Docker 实例中 , 不论这个Docker实例是运行在Windows、macOS 亦或是 Linux . 
+Docker Desktop 实现容器化与 Docker Engine 是一致的 , 这就保证了我们在 Windows和macOS中开发所使用的环境可以很轻松的转移到其他的 Docker 实例中 , 不论这个Docker实例是运行在Windows、macOS 亦或是 Linux .
 
 #### 安装 Docker Desktop
 
@@ -16,5 +16,10 @@ Docker Desktop 实现容器化与 Docker Engine 是一致的 , 这就保证了�
 
 > VirtualBox与Docker Desktop的兼容性不太好 , 尽量别同时用 .
 
+下载 : 
 
+* Windows - https://store.docker.com/editions/community/docker-ce-desktop-windows
+* MacOS - https://store.docker.com/editions/community/docker-ce-desktop-mac
+
+按照正常的方式安装即可 . 
 
