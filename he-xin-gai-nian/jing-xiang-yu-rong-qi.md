@@ -36,9 +36,15 @@ docker images
 
 **镜像命名**
 
-虽然镜像ID可以识别唯一性 , 但通过镜像命名识别镜像更容易一些 . REPOSITORY和TAG , 这两者其实就组成了 docker 对镜像的命名规则 . 
+虽然镜像ID可以识别唯一性 , 但通过镜像命名识别镜像更容易一些 . REPOSITORY和TAG , 这两者其实就组成了 docker 对镜像的命名规则 .
 
 ![](/assets/jingxiangmingming.png)
+
+镜像的命名准确说 , 有三部分 : username , repository , tag
+
+* **username** - 主要用于识别上传镜像的不同用户 , 与 GitHub 中的用户空间类似 . 
+* **repository - **主要用于识别进行的内容 , 形成对镜像的表意描述 . 
+* **tag - **主要用户表示镜像的版本 , 方便区分进行内容的不同细节 . 
 
 
 
