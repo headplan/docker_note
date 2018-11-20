@@ -18,13 +18,6 @@ $ sudo systemctl enable docker # 开机自启动
 $ sudo systemctl start docker
 ```
 
-默认情况下 ,`docker` 命令会使用 [Unix socket](https://en.wikipedia.org/wiki/Unix_domain_socket) 与 Docker 引擎通讯 . 安全考虑应该创建docker用户组 .
-
-```
-$ sudo groupadd docker
-$ sudo usermod -aG docker $USER
-```
-
 #### Debian
 
 ```
@@ -63,6 +56,13 @@ $ sudo apt-get install docker-ce
 $
 $ sudo systemctl enable docker
 $ sudo systemctl start docker
+```
+
+默认情况下 ,`docker` 命令会使用 [Unix socket](https://en.wikipedia.org/wiki/Unix_domain_socket) 与 Docker 引擎通讯 . 安全考虑应该创建docker用户组 .
+
+```
+$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
 ```
 
 
