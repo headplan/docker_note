@@ -27,7 +27,9 @@ Docker Desktop 实现容器化与 Docker Engine 是一致的 , 这就保证了�
 
 #### Docker Desktop 的实现原理
 
-就是在系统本身再虚拟化一个系统  , 在Windows中 , 通过 Hyper-V 实现虚拟化 . 在 macOS中 , 通过 HyperKit 实现虚拟化 . 在搭建的虚拟Linux系统上安装和运行docker daemon . 
+就是在系统本身再虚拟化一个系统  , 在Windows中 , 通过 Hyper-V 实现虚拟化 . 在 macOS中 , 通过 HyperKit 实现虚拟化 . 在搭建的虚拟Linux系统上安装和运行docker daemon .
 
 ![](/assets/desktop.png)
+
+因为Docker daemon使用 RESTful Api 作为控制方式 , 所以Docker Desktop只要实现Windows和MacOS中的客户端 , 就能够直接利用Hypervisor的网络支持与虚拟Linux系统中的docker daemon进行通讯 , 并对它进行控制 . 
 
