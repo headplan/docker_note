@@ -50,5 +50,11 @@ docker images
 
 Docker每次构建镜像的内容也就有所不同 , 具体体现就是镜像层以及它们的 ID 都会产生变化 . 而**tag**标签就是在镜像命名这个层面上区分这些镜像的方法 . 通常用版本号 , 环境等作为tag , 例如redis:3.2 , redis:4.0 , php:7.2-cli , php:7.2-fpm .
 
-还有一个约定 , 在操作中没有具体给出镜像的tag时 , Docker 会采用latest作为缺省 tag . 
+还有一个约定 , 在操作中没有具体给出镜像的tag时 , Docker 会采用latest作为缺省 tag .
+
+---
+
+#### 容器的生命周期
+
+![](/assets/rongqideshengmingzhouqi.png)
 
