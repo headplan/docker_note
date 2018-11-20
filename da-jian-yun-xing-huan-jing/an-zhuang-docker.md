@@ -85,3 +85,7 @@ docker info # 查看Docker Engine相关信息
 
 可以看到正在运行的 Docker Engine 实例中运行的容器数量 , 存储的引擎等等 . 
 
+#### 配置国内镜像
+
+
+
