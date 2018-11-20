@@ -69,13 +69,19 @@ $ sudo usermod -aG docker $USER
 
 #### 上手使用
 
-通过软件包的形式安装 Docker Engine 时 , 安装包已经为我们在 Linux 系统中注册了一个 Docker 服务 , 所以我们不需要直接启动 docker daemon 对应的 dockerd 这个程序 , 而是直接启动 Docker 服务即可 . 就是前面提到的命令 . 
+通过软件包的形式安装 Docker Engine 时 , 安装包已经为我们在 Linux 系统中注册了一个 Docker 服务 , 所以我们不需要直接启动 docker daemon 对应的 dockerd 这个程序 , 而是直接启动 Docker 服务即可 . 就是前面提到的命令 .
 
-尝试几个命令 : 
+尝试几个命令 :
 
 ```
 docker version # 查看Client和Server两端的版本信息
 ```
 
-服务端和客户端通过RESTful接口进行了解耦 , 所以可以修改配置用于其他机器上运行服务端 . 
+服务端和客户端通过RESTful接口进行了解耦 , 所以可以修改配置用于其他机器上运行服务端 .
+
+```
+docker info # 查看Docker Engine相关信息
+```
+
+可以看到正在运行的 Docker Engine 实例中运行的容器数量 , 存储的引擎等等 . 
 
