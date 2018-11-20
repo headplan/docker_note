@@ -6,6 +6,7 @@
   * [基本概念](about/ji-ben-gai-nian.md)
 * [搭建运行环境](da-jian-yun-xing-huan-jing.md)
   * [安装Docker](da-jian-yun-xing-huan-jing/an-zhuang-docker.md)
+  * [Docker Desktop](da-jian-yun-xing-huan-jing/docker-desktop.md)
 * [核心概念](核心概念.md)
   * [镜像](镜像.md)
 * [CentOS和MacOS安装Docker](centos和macos安装docker.md)
