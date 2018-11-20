@@ -31,5 +31,13 @@ Docker Desktop 实现容器化与 Docker Engine 是一致的 , 这就保证了�
 
 ![](/assets/desktop.png)
 
-因为Docker daemon使用 RESTful Api 作为控制方式 , 所以Docker Desktop只要实现Windows和MacOS中的客户端 , 就能够直接利用Hypervisor的网络支持与虚拟Linux系统中的docker daemon进行通讯 , 并对它进行控制 . 
+因为Docker daemon使用 RESTful Api 作为控制方式 , 所以Docker Desktop只要实现Windows和MacOS中的客户端 , 就能够直接利用Hypervisor的网络支持与虚拟Linux系统中的docker daemon进行通讯 , 并对它进行控制 .
+
+#### 主机文件挂载
+
+Docker 容器中能够通过数据卷的方式挂载宿主操作系统中的文件或目录 , 这里在宿主操作系统上的Linux是虚拟的系统 . 先将目录挂载到虚拟 Linux 系统上 , 再利用 Docker 挂载到容器之中 , Docker Desktop简化了这个流程 . 
+
+![](/assets/guazai.png)
+
+
 
