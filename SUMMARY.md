@@ -9,5 +9,6 @@
   * [Docker Desktop](da-jian-yun-xing-huan-jing/docker-desktop.md)
 * [核心概念](he-xin-gai-nian.md)
   * [镜像与容器](he-xin-gai-nian/jing-xiang-yu-rong-qi.md)
+  * [从镜像仓库获得镜像](he-xin-gai-nian/cong-jing-xiang-cang-ku-huo-de-jing-xiang.md)
 * [镜像](jingxiang.md)
 
