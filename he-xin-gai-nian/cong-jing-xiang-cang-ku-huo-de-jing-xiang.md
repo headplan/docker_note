@@ -24,3 +24,11 @@ docker pull openresty/openresty:1.13.6.2-alpine
 
 下载过程可以看出前面提及的分层存储概念 , 镜像是由多层存储所构成的 . 下载过程中给出了每一层的ID前12位 . 下载结束后给出完整的sha256摘要 . 镜像在被拉取之后 , 就存放在了本地 , 接受当前这个Docker实例管理了 , 可以通过docker images查看 .
 
+#### Docker Hub
+
+Docker Hub 是 Docker 官方建立的中央镜像仓库 , 除了普通镜像仓库的功能外 , 它内部还有更加细致的权限管理 , 支持构建钩子和自动构建 , 并且有一套精致的 Web 操作页面 . 
+
+Docker Hub 的地址是：https://hub.docker.com/
+
+
+
