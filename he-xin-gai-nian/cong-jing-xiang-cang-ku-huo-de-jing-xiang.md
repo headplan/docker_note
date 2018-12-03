@@ -26,9 +26,9 @@ docker pull openresty/openresty:1.13.6.2-alpine
 
 #### Docker Hub
 
-Docker Hub 是 Docker 官方建立的中央镜像仓库 , 除了普通镜像仓库的功能外 , 它内部还有更加细致的权限管理 , 支持构建钩子和自动构建 , 并且有一套精致的 Web 操作页面 . 
+Docker Hub 是 Docker 官方建立的中央镜像仓库 , 除了普通镜像仓库的功能外 , 它内部还有更加细致的权限管理 , 支持构建钩子和自动构建 , 并且有一套精致的 Web 操作页面 .
 
-Docker Hub 的地址是：https://hub.docker.com/
+Docker Hub 的地址是：[https://hub.docker.com/](https://hub.docker.com/)
 
-
+Docker Hub 是 Docker Engine 的默认镜像仓库 , 所以镜像足够丰富 . 
 
