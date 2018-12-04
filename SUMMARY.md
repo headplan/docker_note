@@ -17,6 +17,7 @@
   * 保存和共享镜像
   * 通过Dockerfile创建镜像
   * 常见的Dockerfile使用技巧
+  * 使用Docker Hub中的镜像
 * [组合应用](zu-he-ying-yong.md)
 * [案例实践](an-li-shi-jian.md)
 * [镜像](jingxiang.md)
