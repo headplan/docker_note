@@ -100,5 +100,5 @@ Docker的快读打包镜像和数据卷完美的解决了这两个问题 .
 docker exec nginx more /etc/hostname
 ```
 
-`docker exec`命令能在正在运行的容器中运行指定命令 . 
+`docker exec`命令能在正在运行的容器中运行指定命令 . 所以 , 我们就可以使用sh或bash运行命令或控制台了 . 
 
