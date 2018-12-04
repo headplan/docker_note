@@ -56,11 +56,11 @@ String url = "jbdc:mysql://mysql:3306/webapp";
 
 容器自我标记端口可被访问的过程 , 就叫暴露端口 . `docker ps`中查看到的PORTS就是暴露的端口 .
 
-端口的暴露可以通过 Docker 镜像进行定义 , 也可以在容器创建时进行定义 . 创建时使用`--expose`选项即可 : 
+端口的暴露可以通过 Docker 镜像进行定义 , 也可以在容器创建时进行定义 . 创建时使用`--expose`选项即可 :
 
 ```
 docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --expose 13306 --expose 23306 mysql:5.7
 ```
 
-
+其实就类似于打开了容器的防火墙 . 
 
