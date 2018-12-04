@@ -42,5 +42,5 @@ docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
 docker run -d --name webapp --link mysql webapp:latest
 ```
 
-容器间的网络已经打通 , 在 Web 应用中连接到 MySQL 数据库 , 只要将容器的网络命名填入到连接地址中 , 就可以访问需要连接的容器了 . 
+容器间的网络已经打通 , 在 Web 应用中连接到 MySQL 数据库 , 只要将容器的网络命名填入到连接地址中 , 就可以访问需要连接的容器了 . 也就是容器的别名 , 映射IP的工作都由Docker完成 . 
 
