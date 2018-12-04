@@ -64,3 +64,15 @@ docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --expose 13306 --ex
 
 其实就类似于打开了容器的防火墙 . 
 
+#### 通过别名连接
+
+使用`--link <name>:<alias>`的形式 , 连接到 MySQL 容器 , 并设置它的别名为 database . 
+
+```
+docker run -d --name webapp --link mysql:database webapp:latest
+```
+
+现在就可以使用database来代替连接地址了 . 
+
+
+
