@@ -31,6 +31,18 @@ docker create --name my_nginx nginx:1.12
 现在创建的容器状态还是Created , 其内部的应用程序还没有启动 , 接下来要启动它
 
 ```
+docker start nginx
+```
+
+这里直接启动nginx , 就是刚才create时命名的容器 . 
+
+**运行容器**
+
+`docker create`和`docker start`两个命令的整合
 
 ```
+docker run --name nginx -d nginx:1.12
+```
+
+
 
