@@ -20,3 +20,11 @@ docker create nginx:1.12
 
 Docker根据给出的镜像创建容器 , 控制台打印出容器ID , 此时容器处于Created状态 . 
 
+--name参数配置容器名 , 让对容器的操作更方便
+
+```
+docker create --name my_nginx nginx:1.12
+```
+
+
+
