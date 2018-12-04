@@ -65,5 +65,5 @@ docker images
 docker inspect {Tab补全}
 ```
 
-
+传参除了镜像或容器的名称 , 还可以是镜像ID或容器ID . 
 
