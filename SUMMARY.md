@@ -12,6 +12,7 @@
   * [从镜像仓库获得镜像](he-xin-gai-nian/cong-jing-xiang-cang-ku-huo-de-jing-xiang.md)
   * [运行和管理容器](he-xin-gai-nian/yun-xing-he-guan-li-rong-qi.md)
   * [给容器配置网络](he-xin-gai-nian/gei-rong-qi-pei-zhi-wang-luo.md)
+  * [管理和存储数据](he-xin-gai-nian/guan-li-he-cun-chu-shu-ju.md)
 * [操作镜像](cao-zuo-jing-xiang.md)
 * [组合应用](zu-he-ying-yong.md)
 * [案例实践](an-li-shi-jian.md)
