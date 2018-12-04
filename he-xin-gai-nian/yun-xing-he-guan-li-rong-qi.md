@@ -66,5 +66,11 @@ docker ps
 
 #### 停止和删除容器
 
+将正在运行的容器停止
+
+```
+docker stop nginx
+```
+
 
 
