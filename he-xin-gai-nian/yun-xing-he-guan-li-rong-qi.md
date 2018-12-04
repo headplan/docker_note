@@ -72,5 +72,5 @@ docker ps
 docker stop nginx
 ```
 
-
+容器停止后 , 其维持的文件系统沙盒环境还是存在的 , 内部被修改的内容也都会保留 , 所以还可以通过`docker start`命令将这个容器再次启动 . 
 
