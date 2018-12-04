@@ -62,11 +62,11 @@ String url = "jbdc:mysql://mysql:3306/webapp";
 docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --expose 13306 --expose 23306 mysql:5.7
 ```
 
-其实就类似于打开了容器的防火墙 . 
+其实就类似于打开了容器的防火墙 .
 
 #### 通过别名连接
 
-使用`--link <name>:<alias>`的形式 , 连接到 MySQL 容器 , 并设置它的别名为 database . 
+使用`--link <name>:<alias>`的形式 , 连接到 MySQL 容器 , 并设置它的别名为 database .
 
 ```
 docker run -d --name webapp --link mysql:database webapp:latest
@@ -74,5 +74,9 @@ docker run -d --name webapp --link mysql:database webapp:latest
 
 现在就可以使用database来代替连接地址了 . 
 
+#### 管理网络
 
+这里的网络指的是Docker虚拟的子网 , 而容器网络沙盒可以看做是虚拟的主机 , 只有当多个主机在同一子网里时 , 才能互相看到并进行网络数据交换 . 
+
+启动Docker服务时 , 会创建一个默认的bridge网络 , 同时创建的容器在不指定网络的情况下都会连接到这个网络上 . 例如前面的nginx和mysql , 他们都连接了bridge网络 . 
 
