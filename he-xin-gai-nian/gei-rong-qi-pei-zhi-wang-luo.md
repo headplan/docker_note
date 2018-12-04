@@ -42,15 +42,19 @@ docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
 docker run -d --name webapp --link mysql webapp:latest
 ```
 
-容器间的网络已经打通 , 在 Web 应用中连接到 MySQL 数据库 , 只要将容器的网络命名填入到连接地址中 , 就可以访问需要连接的容器了 . 也就是容器的别名 , 映射IP的工作都由Docker完成 . 
+容器间的网络已经打通 , 在 Web 应用中连接到 MySQL 数据库 , 只要将容器的网络命名填入到连接地址中 , 就可以访问需要连接的容器了 . 也就是容器的别名 , 映射IP的工作都由Docker完成 .
 
-例如 , 使用JDBC连接数据库 
+例如 , 使用JDBC连接数据库
 
 ```
 String url = "jbdc:mysql://mysql:3306/webapp";
 ```
 
 #### 暴露端口
+
+容器网络打通了 , 但是只有容器自身允许的端口 , 才能被其他容器所访问 . 
+
+容器自我标记端口可被访问的过程 , 就叫暴露端口 . `docker ps`中查看到的PORTS就是暴露的端口 . 
 
 
 
