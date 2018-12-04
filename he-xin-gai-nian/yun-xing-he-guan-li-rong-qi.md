@@ -34,7 +34,7 @@ docker create --name my_nginx nginx:1.12
 docker start nginx
 ```
 
-这里直接启动nginx , 就是刚才create时命名的容器 . 
+这里直接启动nginx , 就是刚才create时命名的容器 .
 
 **运行容器**
 
@@ -44,5 +44,5 @@ docker start nginx
 docker run --name nginx -d nginx:1.12
 ```
 
-
+这里看一下`-d`参数 , 也就是`--detach`参数 , 这个选项告诉Docker在启动后将程序与控制台分离 , 在后台运行 . 
 
