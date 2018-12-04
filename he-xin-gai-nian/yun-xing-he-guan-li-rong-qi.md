@@ -94,5 +94,11 @@ Docker的快读打包镜像和数据卷完美的解决了这两个问题 .
 
 #### 进入容器
 
+让容器运行给出的命令
 
+```
+docker exec nginx more /etc/hostname
+```
+
+`docker exec`命令能在正在运行的容器中运行指定命令 . 
 
