@@ -19,6 +19,10 @@
   * 常见的Dockerfile使用技巧
   * 使用Docker Hub中的镜像
 * [组合应用](zu-he-ying-yong.md)
+  * 使用Docker Compose管理容器
+  * 常用的Docker Compose配置项
+  * 编写Docker Compose项目
+  * 应用于服务化开发
 * [案例实践](an-li-shi-jian.md)
 * [镜像](jingxiang.md)
 
