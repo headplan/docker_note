@@ -78,28 +78,28 @@ docker run -d --name webapp --link mysql:database webapp:latest
 
 这里的网络指的是Docker虚拟的子网 , 而容器网络沙盒可以看做是虚拟的主机 , 只有当多个主机在同一子网里时 , 才能互相看到并进行网络数据交换 .
 
-启动Docker服务时 , 会创建一个默认的bridge网络 , 同时创建的容器在不指定网络的情况下都会连接到这个网络上 . 例如前面的nginx和mysql , 他们都连接了bridge网络 . 
+启动Docker服务时 , 会创建一个默认的bridge网络 , 同时创建的容器在不指定网络的情况下都会连接到这个网络上 . 例如前面的nginx和mysql , 他们都连接了bridge网络 .
 
 通过docker inspect命令查看容器 , 可以在Network部分看到容器网络相关的信息
 
 ```js
 "Networks": {
-                "bridge": {
-                    "IPAMConfig": null,
-                    "Links": null,
-                    "Aliases": null,
-                    "NetworkID": "2f7e7184e0357d5469e6748a1256ace35a8ca8dc72089f26e39b338dd5f2279d",
-                    "EndpointID": "fa5fec1c28bbd4d6813330d95eb70f5abc04672bcc9c91a6a62eee4bd506647a",
-                    "Gateway": "172.17.0.1",
-                    "IPAddress": "172.17.0.3",
-                    "IPPrefixLen": 16,
-                    "IPv6Gateway": "",
-                    "GlobalIPv6Address": "",
-                    "GlobalIPv6PrefixLen": 0,
-                    "MacAddress": "02:42:ac:11:00:03",
-                    "DriverOpts": null
-                }
-            }
+    "bridge": {
+        "IPAMConfig": null,
+        "Links": null,
+        "Aliases": null,
+        "NetworkID": "2f7e7184e0357d5469e6748a1256ace35a8ca8dc72089f26e39b338dd5f2279d",
+        "EndpointID": "fa5fec1c28bbd4d6813330d95eb70f5abc04672bcc9c91a6a62eee4bd506647a",
+        "Gateway": "172.17.0.1",
+        "IPAddress": "172.17.0.3",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "MacAddress": "02:42:ac:11:00:03",
+        "DriverOpts": null
+    }
+}
 ```
 
 
