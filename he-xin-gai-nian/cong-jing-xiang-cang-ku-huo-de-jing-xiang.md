@@ -67,3 +67,11 @@ docker inspect {Tab补全}
 
 传参除了镜像或容器的名称 , 还可以是镜像ID或容器ID . 
 
+删除镜像 , 将它们从本地的Docker Engine中移除
+
+```
+docker rmi
+```
+
+参数是镜像名称或ID . 
+
