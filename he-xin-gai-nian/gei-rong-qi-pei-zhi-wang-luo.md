@@ -106,5 +106,27 @@ docker run -d --name webapp --link mysql:database webapp:latest
 
 #### 创建网络
 
+自定义虚拟子网 , 也就是自己创建网络
+
+```
+docker network create -d bridge individual
+```
+
+通过-d选项指定网络驱动 , 其值就是前面提到的集中网络驱动 : 
+
+```
+bridge、host、overlay、maclan、none
+```
+
+也可以是其他网络驱动插件所定义的类型 . 这里指定的是bridge , 当然默认也是 . 
+
+查看Docker中已经存在的网络
+
+```
+docker network ls
+或
+docker network list
+```
+
 
 
