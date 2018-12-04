@@ -33,5 +33,14 @@ Docker封装了libnetwork模块 , 实现了容器网络标准对接范式 . 网�
 
 #### 容器互联
 
+互联网时代应用之间的通信都以网络为主 , 容器连接到另外一个容器使用`--link`参数选项进行配置 . 
+
+例如 , 创建一个MySQL容器 , 将运行Web应用的容器连接到这个MySQL容器上 , 打通两个容器间的网络 , 实现它们之间的网络互通 . 
+
+```
+docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+docker run -d --name webapp --link mysql webapp:latest
+```
+
 
 
