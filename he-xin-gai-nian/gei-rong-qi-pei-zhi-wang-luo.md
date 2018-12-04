@@ -18,13 +18,18 @@ Docker网络三个比较核心的概念 :
 
 Docker封装了libnetwork模块 , 实现了容器网络标准对接范式 . 网络实现经过发展后的高度抽象 , 已经可以通过抽象定义实现不同的变化 .
 
-目前官方提供了五种Docker网络驱动 : 
+目前官方提供了五种Docker网络驱动 :
 
 * **Bridge Driver**
 * **Host Driver**
 * **Overlay Driver**
 * **MacLan Driver**
 * **None Driver**
+
+这里使用频率较高的是
+
+* Bridge Driver , 默认的网络驱动 , 网桥来实现的网络通讯
+* Overlay Driver借助Docker集群模块Docker Swarm来搭建的跨Docker Daemon网络 . 可以通过它搭建跨物理主机的虚拟网络 , 进而让不同物理机中运行的容器感知不到多个物理机的存在 . 
 
 
 
