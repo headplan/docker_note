@@ -102,3 +102,14 @@ docker exec nginx more /etc/hostname
 
 `docker exec`命令能在正在运行的容器中运行指定命令 . 所以 , 我们就可以使用sh或bash运行命令或控制台了 . 
 
+```
+docker exec -it nginx bash
+```
+
+这里的`-it`是利用了简写合并机制 , 分别为
+
+* `-i` 或 `--interactive` 表示保持输入流 , 即保证控制台程序能够正确识别输入的命令
+* `-t` 或 `-tty` 启用一个伪终端 , 形成与bash的交互 , 查看bash内部的执行结果
+
+
+
