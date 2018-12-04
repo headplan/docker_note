@@ -44,5 +44,15 @@ docker start nginx
 docker run --name nginx -d nginx:1.12
 ```
 
-这里看一下`-d`参数 , 也就是`--detach`参数 , 这个选项告诉Docker在启动后将程序与控制台分离 , 在后台运行 . 
+这里看一下`-d`参数 , 也就是`--detach`参数 , 这个选项告诉Docker在启动后将程序与控制台分离 , 在后台运行 .
+
+#### 管理容器
+
+罗列出处于运行中的容器
+
+```
+docker ps
+```
+
+添加参数`-a`或`--all`列出所有状态的容器 . 
 
