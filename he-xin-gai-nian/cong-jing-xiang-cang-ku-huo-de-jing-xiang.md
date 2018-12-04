@@ -30,5 +30,20 @@ Docker Hub 是 Docker 官方建立的中央镜像仓库 , 除了普通镜像仓�
 
 Docker Hub 的地址是：[https://hub.docker.com/](https://hub.docker.com/)
 
-Docker Hub 是 Docker Engine 的默认镜像仓库 , 所以镜像足够丰富 . 
+Docker Hub 是 Docker Engine 的默认镜像仓库 , 所以镜像足够丰富 .
+
+**搜索镜像**
+
+Docker Hub提供了完整的搜索界面 , 可以直接搜索关键词 . 搜索结果分类 : 
+
+* **OFFICIAL**
+  代表镜像为Docker官方提供和维护 , 相对来说稳定性和安全性较高
+* **STARS**
+  代表镜像的关注人数 , 这类似 GitHub 的 Stars , 可以理解为热度
+* **PULLS**
+  代表镜像被拉取的次数 , 基本上能够表示镜像被使用的频度
+
+
+
+
 
