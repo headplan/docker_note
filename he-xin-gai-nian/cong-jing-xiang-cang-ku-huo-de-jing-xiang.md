@@ -57,7 +57,12 @@ docker search mysql
 
 ```
 docker images
+```
 
+获取容器/镜像元数据 , 查看更详细的信息
+
+```
+docker inspect {Tab补全}
 ```
 
 
