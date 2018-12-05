@@ -11,5 +11,9 @@ Docker文件系统基于UnionFS , 支持挂在不同类型的文件系统到统�
 
 > UnionFS带来的读写性能损失可以忽略不计 .
 
+#### 挂载方式
 
+Docker提供了三种适用于不同场景的文件系统挂载方式
+
+![](/assets/wenjianxitongguazai.png)
 
