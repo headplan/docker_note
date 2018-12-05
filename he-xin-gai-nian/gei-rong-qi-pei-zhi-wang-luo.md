@@ -138,5 +138,5 @@ docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --network individua
 
 #### 端口映射
 
-
+![](/assets/duankouyingshe.png)
 
