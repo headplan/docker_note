@@ -140,3 +140,5 @@ docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --network individua
 
 ![](/assets/duankouyingshe.png)
 
+通过Docker端口映射功能 , 可以把容器的端口映射到宿主操作系统的端口上 , 当从外部访问宿主操作系统的端口时 , 数据请求就会自动发送给与之关联的容器端口 . 
+
