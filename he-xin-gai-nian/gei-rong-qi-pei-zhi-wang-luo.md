@@ -134,5 +134,9 @@ docker network list
 docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --network individual mysql:5.7
 ```
 
-通过docker inspect查看一下Networks中 , 已经存在individual这个网络了 . 现在 , 如果使用--link参数让处于另外一个网络的容器连接到这个容器上就会报错 , 因为不在同一个网段上 . 
+通过docker inspect查看一下Networks中 , 已经存在individual这个网络了 . 现在 , 如果使用--link参数让处于另外一个网络的容器连接到这个容器上就会报错 , 因为不在同一个网段上 .
+
+#### 端口映射
+
+
 
