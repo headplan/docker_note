@@ -140,5 +140,25 @@ docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --network individua
 
 ![](/assets/duankouyingshe.png)
 
-通过Docker端口映射功能 , 可以把容器的端口映射到宿主操作系统的端口上 , 当从外部访问宿主操作系统的端口时 , 数据请求就会自动发送给与之关联的容器端口 . 
+通过Docker端口映射功能 , 可以把容器的端口映射到宿主操作系统的端口上 , 当从外部访问宿主操作系统的端口时 , 数据请求就会自动发送给与之关联的容器端口 .
+
+端口映射使用`-p`或者`--publish`选项
+
+```
+docker run -d --name nginx -p 80:80 -p 443:443 nginx:1.12
+```
+
+使用端口映射选项的格式是
+
+```
+-p <ip>:<host-port>:<container-port>
+```
+
+ip是宿主操作系统的监听ip , 可以用来控制监听的网卡 , 默认0.0.0.0 . 
+
+host-port 和 container-port 分别表示映射到宿主操作系统的端口和容器的端口 , 这两者是可以不一样的 , 可以将容器的 80 端口映射到宿主操作系统的 8080 端口 , 例如 , 传入`-p 8080:80`即可 . 
+
+
+
+
 
