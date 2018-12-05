@@ -112,13 +112,13 @@ docker run -d --name webapp --link mysql:database webapp:latest
 docker network create -d bridge individual
 ```
 
-通过-d选项指定网络驱动 , 其值就是前面提到的集中网络驱动 : 
+通过-d选项指定网络驱动 , 其值就是前面提到的集中网络驱动 :
 
 ```
 bridge、host、overlay、maclan、none
 ```
 
-也可以是其他网络驱动插件所定义的类型 . 这里指定的是bridge , 当然默认也是 . 
+也可以是其他网络驱动插件所定义的类型 . 这里指定的是bridge , 当然默认也是 .
 
 查看Docker中已经存在的网络
 
@@ -128,5 +128,11 @@ docker network ls
 docker network list
 ```
 
+之后创建容器就可以通过`--network`来指定容器要加入的网络了
 
+```
+docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --network individual mysql:5.7
+```
+
+通过docker inspect查看一下Networks中 , 已经存在individual这个网络了 . 
 
