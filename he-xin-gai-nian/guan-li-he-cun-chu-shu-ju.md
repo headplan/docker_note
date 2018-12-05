@@ -46,7 +46,33 @@ docker exec nginx ls /usr/share/nginx/html
 
 ```
 docker inspect nginx
+[
+    {
+## ......
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/webapp/html",
+                "Destination": "/usr/share/nginx/html",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+## ......
+    }
+]
 ```
 
+信息中返回的RW为true , 表示挂载目录或文件的读写性 . 实际操作中 , Docker还支持以只读的方式挂载 , 例如
 
+```
+docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html:ro nginx:1.12
+```
+
+使用Bind Mount方式常见场景 : 
+
+当需要从宿主操作系统共享配置的时候 . 对于一些配置项 , 可以直接从容器外部挂载到容器中 , 这利于保证容器中的配置为我们所确认的值 , 也方便对配置进行监控 . 例如 , 遇到容器中时区不正确的时候，可以直接将操作系统的时区配置 , 也就是 /etc/timezone 这个文件挂载并覆盖容器中的时区配置 . 
+
+当使用 Docker 进行开发的时候 . 虽然在 Docker 中 , 推崇直接将代码和配置打包进镜像 , 以便快速部署和快速重建 . 但开发过程中非常不方便 , 可以直接把代码挂载进入容器 , 这样每次对代码修改都可以直接在容器外部进行 . 
 
