@@ -32,5 +32,9 @@ Docker提供了三种适用于不同场景的文件系统挂载方式
 
 > host-path 和 container-path 分别代表宿主操作系统中的目录和容器中的目录 . 为了避免混淆 , Docker 这里强制定义目录时必须使用绝对路径 , 不能使用相对路径 .
 
+```
+docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html nginx:1.12
+```
+
 
 
