@@ -36,5 +36,17 @@ Docker提供了三种适用于不同场景的文件系统挂载方式
 docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html nginx:1.12
 ```
 
+挂载了目录的容器启动后 , 可以运行查看
+
+```
+docker exec nginx ls /usr/share/nginx/html
+```
+
+在docker inspect的结果里 , 可以看到有关容器数据挂载相关的信息
+
+```
+docker inspect nginx
+```
+
 
 
