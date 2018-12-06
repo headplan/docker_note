@@ -79,5 +79,15 @@ docker attach nginx
 
 #### 网络配置
 
+```
+# 容器互联
+docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+# 连接到同一网络
+docker run -d --name webapp --link mysql webapp:latest
+# 别名连接
+docker run -d --name webapp --link mysql:database webapp:latest
+
+```
+
 
 
