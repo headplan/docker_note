@@ -80,3 +80,63 @@ docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html:ro nginx:1.12
 
 Tmpfs Mount 是一种特殊的挂载方式 , 它主要利用内存来存储数据 . 由于内存不是持久性存储设备 , 所以其带给 Tmpfs Mount 的特征就是临时性挂载 . 
 
+通过--tmpfs选项来完成 , 只需传递挂载到容器内的目录即可
+
+```
+docker run -d --name webapp --tmpfs /webapp/cache webapp:latest
+```
+
+通过`docker inspect`命令查看
+
+```
+[
+    {
+## ......
+         "Tmpfs": {
+            "/webapp/cache": ""
+        },
+## ......
+    }
+]
+```
+
+挂载临时文件说明它不是持久存储的 , 常见应用场景是
+
+* 应用中使用到 , 但不需要进行持久保存的敏感数据 , 可以借助内存的非持久性和程序隔离性进行一定的安全保障
+* 读写速度要求较高 , 数据变化量大 , 但不需要持久保存的数据 , 可以借助内存的高读写速度减少操作的时间
+
+#### 使用数据卷
+
+前面提到的目录挂载类似其他虚拟机工具 , Docker还创造了数据卷概念 , 就是Volume . 其本质依然是宿主操作系统上的一个目录 , 只不过这个目录存放在Docker内部 , 接受Docker管理 . 
+
+Volume的挂载依然使用`-v`或`--volume`选项来定义数据卷的挂载
+
+```
+docker run -d --name webapp -v /webapp/storage webapp:latest
+```
+
+查看容器中数据卷挂载的信息
+
+```
+[
+    {
+## ......
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "2bbd2719b81fbe030e6f446243386d763ef25879ec82bb60c9be7ef7f3a25336",
+                "Source": "/var/lib/docker/volumes/2bbd2719b81fbe030e6f446243386d763ef25879ec82bb60c9be7ef7f3a25336/_data",
+                "Destination": "/webapp/storage",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+## ......
+    }
+]
+```
+
+
+
