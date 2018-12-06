@@ -107,6 +107,10 @@ docker run -d --name nginx -p 80:80 -p 443:443 nginx:1.12
 ```
 # 挂载文件到容器(-v或--volume)
 docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html nginx:1.12
+# 只读挂载
+docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html:ro nginx:1.12
+# 挂载临时文件目录
+
 ```
 
 
