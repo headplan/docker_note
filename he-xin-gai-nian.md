@@ -86,7 +86,8 @@ docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
 docker run -d --name webapp --link mysql webapp:latest
 # 别名连接
 docker run -d --name webapp --link mysql:database webapp:latest
-
+# 开放端口
+docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --expose 13306 --expose 23306 mysql:5.7
 ```
 
 
