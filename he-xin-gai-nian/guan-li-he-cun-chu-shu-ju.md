@@ -78,7 +78,7 @@ docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html:ro nginx:1.12
 
 #### 挂载临时文件目录
 
-Tmpfs Mount 是一种特殊的挂载方式 , 它主要利用内存来存储数据 . 由于内存不是持久性存储设备 , 所以其带给 Tmpfs Mount 的特征就是临时性挂载 . 
+Tmpfs Mount 是一种特殊的挂载方式 , 它主要利用内存来存储数据 . 由于内存不是持久性存储设备 , 所以其带给 Tmpfs Mount 的特征就是临时性挂载 .
 
 通过--tmpfs选项来完成 , 只需传递挂载到容器内的目录即可
 
@@ -107,7 +107,7 @@ docker run -d --name webapp --tmpfs /webapp/cache webapp:latest
 
 #### 使用数据卷
 
-前面提到的目录挂载类似其他虚拟机工具 , Docker还创造了数据卷概念 , 就是Volume . 其本质依然是宿主操作系统上的一个目录 , 只不过这个目录存放在Docker内部 , 接受Docker管理 . 
+前面提到的目录挂载类似其他虚拟机工具 , Docker还创造了数据卷概念 , 就是Volume . 其本质依然是宿主操作系统上的一个目录 , 只不过这个目录存放在Docker内部 , 接受Docker管理 .
 
 Volume的挂载依然使用`-v`或`--volume`选项来定义数据卷的挂载
 
@@ -138,5 +138,15 @@ docker run -d --name webapp -v /webapp/storage webapp:latest
 ]
 ```
 
+信息与绑定挂载有所区别 , 除了Type中的类型不一样之外 , Name和Source信息也有所不同 . 
 
+Source是Docker为我们分配用于挂载的宿主机目录 . 位于Docker的资源区域 , `/var/lib/docker`内 . 
+
+Name就是数据卷的命名 , 未给出数据卷命名的时候 , Docker会采用数据卷的ID命名 , 也可以通过
+
+```
+-v <name>:<container-path>
+```
+
+命名 . 
 
