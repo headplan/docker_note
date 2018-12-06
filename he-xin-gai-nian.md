@@ -93,8 +93,11 @@ docker run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes --expose 13306 --ex
 #### 网络管理
 
 ```
-# 创建虚拟子网
-
+# 创建虚拟子网(bridge、host、overlay、maclan、none)
+docker network create -d bridge individual
+# 查看已经存在的网络
+docker network ls
+docker network list
 ```
 
 
