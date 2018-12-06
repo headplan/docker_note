@@ -50,7 +50,10 @@ docker inspect mysql
 #### 容器管理
 
 ```
-# 
+# 创建容器
+docker create nginx:1.12
+# 创建并命名容器
+docker create --name nginx nginx:1.12
 ```
 
 
