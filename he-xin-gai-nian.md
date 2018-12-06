@@ -23,7 +23,6 @@ docker images -f before=mongo:3.2
 # 还可以通过label过滤镜像列表
 docker images -f label=com.example.version=0.1
 
-
 # 删除虚悬镜像
 docker rmi (docker images -q -f dangling=true)
 ```
