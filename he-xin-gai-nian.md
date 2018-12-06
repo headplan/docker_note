@@ -53,7 +53,7 @@ docker inspect mysql
 # 创建容器
 docker create nginx:1.12
 # 创建并命名容器
-docker create --name nginx nginx:1.12
+docker create --name my_nginx nginx:1.12
 ```
 
 
