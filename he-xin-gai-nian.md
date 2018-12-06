@@ -60,7 +60,7 @@ docker start my_nginx
 docker run --name nginx -d nginx:1.12
 # 查看运行中的容器
 docker ps
-# 查看所有容器
+# 查看所有状态的容器
 docker -a
 docker --all
 ```
