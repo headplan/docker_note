@@ -69,6 +69,10 @@ docker stop nginx
 docker rm nginx
 # 强制删除容器
 docker rm nginx --force 或 -f
+# 在容器中运行指定命令
+docker exec nginx more /etc/hostname
+# 进入容器并进入控制台
+docker exec -it nginx bash
 ```
 
 
