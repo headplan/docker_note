@@ -1,6 +1,6 @@
 # 使用容器
 
-#### images相关命令
+#### 镜像列表
 
 ```
 # 列出镜像
@@ -45,6 +45,12 @@ docker rmi mysql
 docker rmi a339c66710f6
 # 查看容器/镜像详细信息数据
 docker inspect mysql
+```
+
+#### 容器管理
+
+```
+# 
 ```
 
 
