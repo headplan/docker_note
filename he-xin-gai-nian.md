@@ -102,5 +102,12 @@ docker network list
 docker run -d --name nginx -p 80:80 -p 443:443 nginx:1.12
 ```
 
+#### 存储数据
+
+```
+# 挂载文件到容器(-v或--volume)
+docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html nginx:1.12
+```
+
 
 
