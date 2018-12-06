@@ -56,6 +56,13 @@ docker create nginx:1.12
 docker create --name my_nginx nginx:1.12
 # 启动容器
 docker start my_nginx
+# 运行容器 - 创建并启动容器
+docker run --name nginx -d nginx:1.12
+# 查看运行中的容器
+docker ps
+# 查看所有容器
+docker -a
+docker --all
 ```
 
 
