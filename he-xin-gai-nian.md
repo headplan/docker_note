@@ -73,6 +73,8 @@ docker rm nginx --force 或 -f
 docker exec nginx more /etc/hostname
 # 进入容器并进入控制台
 docker exec -it nginx bash
+# 衔接到容器
+docker attach nginx
 ```
 
 
