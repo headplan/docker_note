@@ -31,5 +31,14 @@ docker images --format "{{.ID}}: {{.Repository}}"
 docker images --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"
 ```
 
+#### 镜像操作
+
+```
+# 获取镜像
+docker pull [选项] [Docker Registry地址]<仓库名>:<标签>
+docker pull ubuntu
+docker pull openresty/openresty:1.13.6.2-alpine
+```
+
 
 
