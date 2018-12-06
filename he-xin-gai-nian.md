@@ -38,6 +38,13 @@ docker images --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"
 docker pull [选项] [Docker Registry地址]<仓库名>:<标签>
 docker pull ubuntu
 docker pull openresty/openresty:1.13.6.2-alpine
+# 镜像搜索
+docker search mysql
+# 镜像删除
+docker rmi mysql
+docker rmi a339c66710f6
+# 查看容器/镜像详细信息数据
+docker inspect mysql
 ```
 
 
