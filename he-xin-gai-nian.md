@@ -63,6 +63,11 @@ docker ps
 # 查看所有状态的容器
 docker -a
 docker --all
+# 停止容器
+docker ps
+# 删除容器
+docker rm nginx
+docker rm nginx --
 ```
 
 
