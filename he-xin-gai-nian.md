@@ -64,10 +64,11 @@ docker ps
 docker -a
 docker --all
 # 停止容器
-docker ps
+docker stop nginx
 # 删除容器
 docker rm nginx
-docker rm nginx --
+# 强制删除容器
+docker rm nginx --force 或 -f
 ```
 
 
