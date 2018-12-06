@@ -98,6 +98,8 @@ docker network create -d bridge individual
 # 查看已经存在的网络
 docker network ls
 docker network list
+# 端口映射(-p或--publish)
+docker run -d --name nginx -p 80:80 -p 443:443 nginx:1.12
 ```
 
 
