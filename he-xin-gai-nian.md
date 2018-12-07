@@ -110,7 +110,6 @@ docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html nginx:1.12
 # 只读挂载
 docker run -d --name nginx -v /webapp/html:/usr/share/nginx/html:ro nginx:1.12
 # 挂载临时文件目录
-
 ```
 
 
