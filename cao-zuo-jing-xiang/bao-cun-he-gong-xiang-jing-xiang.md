@@ -30,15 +30,27 @@ docker commit -m "Configured" webapp
 
 **为镜像命名**
 
-提交容器更新后产生的镜像并没 REPOSITORY 和 TAG 的内容 , 也就是说新的镜像还没有名字 . 为镜像取名的命令 : 
+提交容器更新后产生的镜像并没 REPOSITORY 和 TAG 的内容 , 也就是说新的镜像还没有名字 . 为镜像取名的命令 :
 
 ```
 docker tag 0bc42f7ff218 webapp:1.0
 ```
 
-使用`docker tag`能够为未命名的镜像指定镜像名 , 也能够对已有的镜像创建一个新的命名 . 他们IMAGE ID都是一样的 . 
+使用`docker tag`能够为未命名的镜像指定镜像名 , 也能够对已有的镜像创建一个新的命名 . 他们IMAGE ID都是一样的 .
 
 #### 镜像的迁移
+
+Docker是以集中的方式管理镜像的 , 所以在迁移之前要先从 Docker 中取出镜像 : 
+
+```
+docker save webapp:1.0 > webapp-1.0.tar
+```
+
+用Linux管道方式不太友好 , 可以使用`-o`选项来指定输出文件 : 
+
+```
+docker save -o ./webapp-1.0.tar webapp:1.0
+```
 
 #### 导出和导入容器
 
