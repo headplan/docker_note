@@ -54,13 +54,17 @@ docker save -o ./webapp-1.0.tar webapp:1.0
 
 **导入镜像**
 
-导出的镜像可以复制到其他机器上 , 然后导入 : 
+导出的镜像可以复制到其他机器上 , 然后导入 :
 
 ```
 docker load < webapp-1.0.tar
 ```
 
+`docker load`命令是从输入流中读取镜像的数据 , 所以也用到了管道符 . 当然 , 也可以使用参数`-i`选项指定输入文件 : 
 
+```
+docker load -i webapp-1.0.tar
+```
 
 #### 导出和导入容器
 
