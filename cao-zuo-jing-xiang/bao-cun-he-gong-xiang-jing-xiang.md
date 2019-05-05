@@ -66,7 +66,17 @@ docker load < webapp-1.0.tar
 docker load -i webapp-1.0.tar
 ```
 
-导入后可以通过`docker images`查看了 . 
+导入后可以通过`docker images`查看了 .
+
+**批量迁移**
+
+通过前面的两个命令 , 接多个包就可以批量操作了 : 
+
+```
+docker save -o ./images.tar webapp:1.0 nginx:1.12 mysql:5.7
+```
+
+可以打成一个包 , 然后一起导入 . 
 
 #### 导出和导入容器
 
