@@ -52,7 +52,15 @@ docker save webapp:1.0 > webapp-1.0.tar
 docker save -o ./webapp-1.0.tar webapp:1.0
 ```
 
-#### 导入镜像
+**导入镜像**
+
+导出的镜像可以复制到其他机器上 , 然后导入 : 
+
+```
+docker load < webapp-1.0.tar
+```
+
+
 
 #### 导出和导入容器
 
