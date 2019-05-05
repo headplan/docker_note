@@ -14,7 +14,7 @@
   * [给容器配置网络](he-xin-gai-nian/gei-rong-qi-pei-zhi-wang-luo.md)
   * [管理和存储数据](he-xin-gai-nian/guan-li-he-cun-chu-shu-ju.md)
 * [操作镜像](cao-zuo-jing-xiang.md)
-  * 保存和共享镜像
+  * [保存和共享镜像](cao-zuo-jing-xiang/bao-cun-he-gong-xiang-jing-xiang.md)
   * 通过Dockerfile创建镜像
   * 常见的Dockerfile使用技巧
   * 使用Docker Hub中的镜像
