@@ -40,17 +40,19 @@ docker tag 0bc42f7ff218 webapp:1.0
 
 #### 镜像的迁移
 
-Docker是以集中的方式管理镜像的 , 所以在迁移之前要先从 Docker 中取出镜像 : 
+Docker是以集中的方式管理镜像的 , 所以在迁移之前要先从 Docker 中取出镜像 :
 
 ```
 docker save webapp:1.0 > webapp-1.0.tar
 ```
 
-用Linux管道方式不太友好 , 可以使用`-o`选项来指定输出文件 : 
+用Linux管道方式不太友好 , 可以使用`-o`选项来指定输出文件 :
 
 ```
 docker save -o ./webapp-1.0.tar webapp:1.0
 ```
+
+#### 导入镜像
 
 #### 导出和导入容器
 
