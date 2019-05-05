@@ -60,11 +60,13 @@ docker save -o ./webapp-1.0.tar webapp:1.0
 docker load < webapp-1.0.tar
 ```
 
-`docker load`命令是从输入流中读取镜像的数据 , 所以也用到了管道符 . 当然 , 也可以使用参数`-i`选项指定输入文件 : 
+`docker load`命令是从输入流中读取镜像的数据 , 所以也用到了管道符 . 当然 , 也可以使用参数`-i`选项指定输入文件 :
 
 ```
 docker load -i webapp-1.0.tar
 ```
+
+导入后可以通过`docker images`查看了 . 
 
 #### 导出和导入容器
 
