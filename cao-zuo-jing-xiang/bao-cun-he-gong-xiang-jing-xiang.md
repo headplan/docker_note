@@ -70,15 +70,31 @@ docker load -i webapp-1.0.tar
 
 **批量迁移**
 
-通过前面的两个命令 , 接多个包就可以批量操作了 : 
+通过前面的两个命令 , 接多个包就可以批量操作了 :
 
 ```
 docker save -o ./images.tar webapp:1.0 nginx:1.12 mysql:5.7
 ```
 
-可以打成一个包 , 然后一起导入 . 
+可以打成一个包 , 然后一起导入 .
 
 #### 导出和导入容器
 
+这里你可能认为标题重复了 , 提交镜像修改 , 再导出镜像进行迁移可以何为一个命令 : 
 
+```
+docker export -o ./webapp.tar webapp
+```
+
+使用`docker export`导出的容器包 , 可以使用`docker import`导入 . 
+
+这里需要注意的是 , 使用`docker import`并非直接将容器导入 , 而是将容器运行时的内容以镜像的形式导入 . 所以导入的结果其实是一个镜像 . 
+
+在`docker import`的参数里 , 可以给这个镜像命名 . 
+
+```
+docker import ./webapp.tar webapp:1.0
+```
+
+在开发的过程中 , 使用`docker save`和`docker load` , 或者是使用`docker export`和`docker import`都可以达到迁移容器或者镜像的目的 . 
 
