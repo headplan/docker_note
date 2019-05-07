@@ -131,7 +131,7 @@ CMD ["redis-server"]
 
 在 Dockerfile 里 , 可以通过 FROM 指令指定一个基础镜像 , 接下来所有的指令都是基于这个镜像所展开的 . 在镜像构建的过程中 , Docker 也会先获取到这个给出的基础镜像 , 再从这个镜像上进行构建操作 .
 
-FROM 指令支持三种形式 , 核心逻辑就是指出能够被 Docker 识别的那个镜像 . 
+FROM 指令支持三种形式 , 核心逻辑就是指出能够被 Docker 识别的那个镜像 .
 
 ```Dockerfile
 FROM <image> [AS <name>]
@@ -139,5 +139,5 @@ FROM <image>[:<tag>] [AS <name>]
 FROM <image>[@<digest>] [AS <name>]
 ```
 
-
+既然选择一个基础镜像是构建新镜像的根本 , 那么 Dockerfile 中的第一条指令必须是 FROM 指令 , 因为没有了基础镜像 , 一切构建过程都无法开展 . 
 
