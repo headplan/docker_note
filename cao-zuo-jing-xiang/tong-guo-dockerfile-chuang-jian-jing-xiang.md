@@ -125,3 +125,11 @@ CMD ["redis-server"]
 
 这五类命令并非都会出现在一个 Dockerfile 里 , 但却对基于这个 Dockerfile 所构建镜像形成不同的影响 . 
 
+#### 常见 Dockerfile 指令
+
+**FROM**
+
+在 Dockerfile 里 , 可以通过 FROM 指令指定一个基础镜像 , 接下来所有的指令都是基于这个镜像所展开的 . 在镜像构建的过程中 , Docker 也会先获取到这个给出的基础镜像 , 再从这个镜像上进行构建操作 . 
+
+
+
