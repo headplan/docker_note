@@ -139,7 +139,20 @@ FROM <image>[:<tag>] [AS <name>]
 FROM <image>[@<digest>] [AS <name>]
 ```
 
-既然选择一个基础镜像是构建新镜像的根本 , 那么 Dockerfile 中的第一条指令必须是 FROM 指令 , 因为没有了基础镜像 , 一切构建过程都无法开展 . 
+既然选择一个基础镜像是构建新镜像的根本 , 那么 Dockerfile 中的第一条指令必须是 FROM 指令 , 因为没有了基础镜像 , 一切构建过程都无法开展 .
 
-当然 , 一个Dockerfile要以FROM指令作为开始并不意味着FROM只能是Dockerfile中的第一条指令 . 在Dockerfile中可以多次出现FROM指令 , 当FROM第二次或者之后出现时 , 表示在此刻构建时 , 要将当前指出镜像的内容合并到此刻构建镜像的内容里 . 这对于直接合并两个镜像的功能很有帮助。
+当然 , 一个Dockerfile要以FROM指令作为开始并不意味着FROM只能是Dockerfile中的第一条指令 . 在Dockerfile中可以多次出现FROM指令 , 当FROM第二次或者之后出现时 , 表示在此刻构建时 , 要将当前指出镜像的内容合并到此刻构建镜像的内容里 . 这对于直接合并两个镜像的功能很有帮助 . 
+
+**RUN**
+
+RUN 指令就是用于向控制台发送命令的指令 . 
+
+在 RUN 指令之后 , 直接拼接上需要执行的命令 , 在构建时 , Docker 就会执行这些命令 , 并将它们对文件系统的修改记录下来 , 形成镜像的变化 . 
+
+```Dockerfile
+RUN <command>
+RUN ["executable", "param1", "param2"]
+```
+
+
 
