@@ -154,5 +154,11 @@ RUN <command>
 RUN ["executable", "param1", "param2"]
 ```
 
-RUN 指令是支持 \ 换行的 , 如果单行的长度过长 , 可以对内容进行切割 , 方便阅读 . 
+RUN 指令是支持  换行的 , 如果单行的长度过长 , 可以对内容进行切割 , 方便阅读 .
+
+**ENTRYPOINT 和 CMD**
+
+基于镜像启动的容器 , 在容器启动时会根据镜像所定义的一条命令来启动容器中进程号为 1 的进程 . 通过 Dockerfile 中的 ENTRYPOINT 和 CMD 实现 . 
+
+
 

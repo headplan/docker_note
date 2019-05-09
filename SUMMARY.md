@@ -16,7 +16,7 @@
 * [操作镜像](cao-zuo-jing-xiang.md)
   * [保存和共享镜像](cao-zuo-jing-xiang/bao-cun-he-gong-xiang-jing-xiang.md)
   * [通过Dockerfile创建镜像](cao-zuo-jing-xiang/tong-guo-dockerfile-chuang-jian-jing-xiang.md)
-  * 常见的Dockerfile使用技巧
+  * [常见的Dockerfile使用技巧](cao-zuo-jing-xiang/chang-jian-dedockerfile-shi-yong-ji-qiao.md)
   * 使用Docker Hub中的镜像
 * [组合应用](zu-he-ying-yong.md)
   * 使用Docker Compose管理容器
