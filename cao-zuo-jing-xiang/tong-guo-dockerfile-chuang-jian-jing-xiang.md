@@ -213,11 +213,11 @@ ADD [--chown=<user>:<group>] ["<src>",... "<dest>"]
 
 #### 构建镜像
 
-在编写好 Dockerfile 之后 , 就可以构建镜像了 : 
+在编写好 Dockerfile 之后 , 就可以构建镜像了 :
 
 ```
 docker build ./webapp
 ```
 
-
+`docker build`可以接收一个参数 , 需要特别注意的是 , 这个参数为一个目录路径\(本地路径或 URL 路径\) , 而并非 Dockerfile 文件的路径 . 在`docker build`里 , 给出的目录会作为构建的环境目录 , 很多的操作都是基于这个目录进行的 . 
 
