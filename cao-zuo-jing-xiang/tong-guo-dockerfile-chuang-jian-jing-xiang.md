@@ -169,7 +169,17 @@ CMD ["param1","param2"]
 CMD command param1 param2
 ```
 
-ENTRYPOINT 指令和 CMD 指令的用法近似 , 都是给出需要执行的命令 , 并且它们都可以为空 , 或者说是不在 Dockerfile 里指出 . 
+ENTRYPOINT 指令和 CMD 指令的用法近似 , 都是给出需要执行的命令 , 并且它们都可以为空 , 或者说是不在 Dockerfile 里指出 .
 
-当 ENTRYPOINT 与 CMD 同时给出时 , CMD 中的内容会作为 ENTRYPOINT 定义命令的参数 , 最终执行容器启动的还是 ENTRYPOINT 中给出的命令 . 
+当 ENTRYPOINT 与 CMD 同时给出时 , CMD 中的内容会作为 ENTRYPOINT 定义命令的参数 , 最终执行容器启动的还是 ENTRYPOINT 中给出的命令 .
+
+**EXPOSE**
+
+通过 EXPOSE 指令可以为镜像指定要暴露的端口 . 
+
+```
+EXPOSE <port> [<port>/<protocol>...]
+```
+
+当通过 EXPOSE 指令配置了镜像的端口暴露定义 , 基于这个镜像所创建的容器 , 在被其他容器通过`--link`选项连接时 , 就能够直接允许来自其他容器对这些端口的访问了 . 
 
