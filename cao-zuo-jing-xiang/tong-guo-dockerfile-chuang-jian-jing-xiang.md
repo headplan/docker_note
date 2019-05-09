@@ -158,7 +158,18 @@ RUN 指令是支持  换行的 , 如果单行的长度过长 , 可以对内容�
 
 **ENTRYPOINT 和 CMD**
 
-基于镜像启动的容器 , 在容器启动时会根据镜像所定义的一条命令来启动容器中进程号为 1 的进程 . 通过 Dockerfile 中的 ENTRYPOINT 和 CMD 实现 . 
+基于镜像启动的容器 , 在容器启动时会根据镜像所定义的一条命令来启动容器中进程号为 1 的进程 . 通过 Dockerfile 中的 ENTRYPOINT 和 CMD 实现 .
 
+```
+ENTRYPOINT ["executable", "param1", "param2"]
+ENTRYPOINT command param1 param2
 
+CMD ["executable","param1","param2"]
+CMD ["param1","param2"]
+CMD command param1 param2
+```
+
+ENTRYPOINT 指令和 CMD 指令的用法近似 , 都是给出需要执行的命令 , 并且它们都可以为空 , 或者说是不在 Dockerfile 里指出 . 
+
+当 ENTRYPOINT 与 CMD 同时给出时 , CMD 中的内容会作为 ENTRYPOINT 定义命令的参数 , 最终执行容器启动的还是 ENTRYPOINT 中给出的命令 . 
 
