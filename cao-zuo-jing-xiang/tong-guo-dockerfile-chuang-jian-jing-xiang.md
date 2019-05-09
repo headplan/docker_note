@@ -213,5 +213,11 @@ ADD [--chown=<user>:<group>] ["<src>",... "<dest>"]
 
 #### 构建镜像
 
-在编写好 Dockerfile 之后
+在编写好 Dockerfile 之后 , 就可以构建镜像了 : 
+
+```
+docker build ./webapp
+```
+
+
 
