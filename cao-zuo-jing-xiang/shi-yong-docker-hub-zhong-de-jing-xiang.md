@@ -24,11 +24,21 @@ Alpine 系统镜像的尺寸要远小于其他常见的系统镜像 .
 
 ![](/assets/alpinepython.png)
 
-由于基于 Alpine 系统建立的软件镜像远远小于基于其他系统的软件镜像 , 它在网络传输上的优势尤为明显 . 当然 , 有优点也会有缺点 , Alpine 镜像的缺点就在于它实在过于精简 , 缺少很多常见的工具和类库 , 二次构建搭建的过程相当烦琐 . 
+由于基于 Alpine 系统建立的软件镜像远远小于基于其他系统的软件镜像 , 它在网络传输上的优势尤为明显 . 当然 , 有优点也会有缺点 , Alpine 镜像的缺点就在于它实在过于精简 , 缺少很多常见的工具和类库 , 二次构建搭建的过程相当烦琐 .
 
 #### 对容器进行配置
 
-以 MySQL 为例 , 自己安装过 MySQL 的朋友一定知道 , 搭建 MySQL 最麻烦的地方并不是安装的过程 , 而是安装后进行初始化配置的过程 . 就拿更改 root 账号的密码来说 , 在初始的 MySQL 里就要耗费不少工作量 . 
+以 MySQL 为例 , 自己安装过 MySQL 的朋友一定知道 , 搭建 MySQL 最麻烦的地方并不是安装的过程 , 而是安装后进行初始化配置的过程 . 就拿更改 root 账号的密码来说 , 在初始的 MySQL 里就要耗费不少工作量 .
 
-拿到MySQL镜像后 , 面对的就是复杂的初始化过程 . 镜像作者都会准备一些自动化脚本 , 方便快速的初始化 . 
+拿到MySQL镜像后 , 面对的就是复杂的初始化过程 . 镜像作者都会准备一些自动化脚本 , 方便快速的初始化 .
+
+对于 MySQL 镜像来说 , 进行软件配置的方法是通过环境变量的方式来实现的 \( 在其他的镜像里 , 还有通过启动命令、挂载等方式来实现的 \) . 
+
+可以通过下面的命令来直接建立 MySQL 中的用户和数据库 : 
+
+```
+docker run --name mysql -e MYSQL_DATABASE=webapp -e MYSQL_USER=www -e MYSQL_PASSWORD=my-secret-pw -d mysql:5.7
+```
+
+如果深究 MySQL 是如何实现这样复杂的功能的 , 可以在 MySQL 镜像的 Dockerfile 源码库里 , 找到[docker-entrypoint.sh](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fdocker-library%2Fmysql%2Fblob%2Fmaster%2F5.7%2Fdocker-entrypoint.sh)脚本 . 
 
