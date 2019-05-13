@@ -14,12 +14,11 @@
 
 #### Alpine 镜像
 
-镜像标签中的Alpine其实指的是这个镜像内的文件系统内容 , 是基于 Alpine Linux 这个操作系统的 . Alpine Linux是一个相当精简的操作系统 , 而基于它的Docker镜像可以仅有数MB的尺寸 . 如果软件基于这样的系统镜像之上构建而得 , 可以想象新的镜像也是十分小巧的 . 
+镜像标签中的Alpine其实指的是这个镜像内的文件系统内容 , 是基于 Alpine Linux 这个操作系统的 . Alpine Linux是一个相当精简的操作系统 , 而基于它的Docker镜像可以仅有数MB的尺寸 . 如果软件基于这样的系统镜像之上构建而得 , 可以想象新的镜像也是十分小巧的 .
 
 Alpine系统的镜像大小
 
-![](/assets/alpine.png)  
+![](/assets/alpine.png)
 
-
-
+Alpine 系统镜像的尺寸要远小于其他常见的系统镜像 . 
 
