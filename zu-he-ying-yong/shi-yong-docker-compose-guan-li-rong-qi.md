@@ -81,13 +81,11 @@ volumes:
   logvolume: {}
 ```
 
-Docker Compose 配置文件里可以包含许多内容 , 从每个容器的各个细节控制 , 到网络、数据卷等的定义 . 这里看几个主要的细节 . 
+Docker Compose 配置文件里可以包含许多内容 , 从每个容器的各个细节控制 , 到网络、数据卷等的定义 . 这里看几个主要的细节 .
 
-首先是 version 这个配置 , 代表定义的 docker-compose.yml 文件内容所采用的版本 , 目前 Docker Compose 的配置文件已经迭代至了第三版 , 其所支持的功能也越来越丰富 , 所以建议使用最新的版本来定义 . 
+首先是 version 这个配置 , 代表定义的 docker-compose.yml 文件内容所采用的版本 , 目前 Docker Compose 的配置文件已经迭代至了第三版 , 其所支持的功能也越来越丰富 , 所以建议使用最新的版本来定义 .
 
-看看 services 这块 , 这是整个 docker-compose.yml 的核心部分 , 其定义了容器的各项细节 . 
+看看 services 这块 , 这是整个 docker-compose.yml 的核心部分 , 其定义了容器的各项细节 .
 
-在 Docker Compose 里不直接体现容器这个概念 , 这是把 service 作为配置的最小单元 . 虽然看上去每个 service 里的配置内容就像是在配置容器 , 但其实 service 代表的是一个应用集群的配置 . 每个 service 定义的内容，可以通过特定的配置进行水平扩充 , 将同样的容器复制数份形成一个容器集群 . 而 Docker Compose 能够对这个集群做到黑盒效果，让其他的应用和容器无法感知它们的具体结构。
-
-对于 docker-compose.yml 配置的具体细节 , 我们在下一节中还会专门讲解 . 
+在 Docker Compose 里不直接体现容器这个概念 , 这是把 service 作为配置的最小单元 . 虽然看上去每个 service 里的配置内容就像是在配置容器 , 但其实 service 代表的是一个应用集群的配置 . 每个 service 定义的内容 , 可以通过特定的配置进行水平扩充 , 将同样的容器复制数份形成一个容器集群 . 而 Docker Compose 能够对这个集群做到黑盒效果 , 让其他的应用和容器无法感知它们的具体结构 . 
 
