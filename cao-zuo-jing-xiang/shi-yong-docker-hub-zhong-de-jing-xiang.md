@@ -32,13 +32,17 @@ Alpine 系统镜像的尺寸要远小于其他常见的系统镜像 .
 
 拿到MySQL镜像后 , 面对的就是复杂的初始化过程 . 镜像作者都会准备一些自动化脚本 , 方便快速的初始化 .
 
-对于 MySQL 镜像来说 , 进行软件配置的方法是通过环境变量的方式来实现的 \( 在其他的镜像里 , 还有通过启动命令、挂载等方式来实现的 \) . 
+对于 MySQL 镜像来说 , 进行软件配置的方法是通过环境变量的方式来实现的 \( 在其他的镜像里 , 还有通过启动命令、挂载等方式来实现的 \) .
 
-可以通过下面的命令来直接建立 MySQL 中的用户和数据库 : 
+可以通过下面的命令来直接建立 MySQL 中的用户和数据库 :
 
 ```
 docker run --name mysql -e MYSQL_DATABASE=webapp -e MYSQL_USER=www -e MYSQL_PASSWORD=my-secret-pw -d mysql:5.7
 ```
 
-如果深究 MySQL 是如何实现这样复杂的功能的 , 可以在 MySQL 镜像的 Dockerfile 源码库里 , 找到[docker-entrypoint.sh](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fdocker-library%2Fmysql%2Fblob%2Fmaster%2F5.7%2Fdocker-entrypoint.sh)脚本 . 
+如果深究 MySQL 是如何实现这样复杂的功能的 , 可以在 MySQL 镜像的 Dockerfile 源码库里 , 找到[docker-entrypoint.sh](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fdocker-library%2Fmysql%2Fblob%2Fmaster%2F5.7%2Fdocker-entrypoint.sh)脚本 .
+
+#### 共享自己的镜像
+
+共享镜像 , 一般都会到Docker Hub上共享 . 注册账号选择`Create Automated Build`\(创建自动构建\) . 
 
