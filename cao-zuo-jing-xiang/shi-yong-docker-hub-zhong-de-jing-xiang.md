@@ -46,3 +46,5 @@ docker run --name mysql -e MYSQL_DATABASE=webapp -e MYSQL_USER=www -e MYSQL_PASS
 
 共享镜像 , 一般都会到Docker Hub上共享 . 注册账号选择`Create Automated Build`\(创建自动构建\) . 
 
+自动构建镜像是 Docker Hub 为我们提供的一套镜像构建服务 , 只需要提供 Dockerfile 和相关的基本文件 , Docker Hub 就能够在云端自动将它们构建成镜像 , 之后便可以让其他开发者通过`docker pull`命令拉取到这一镜像 . 
+
