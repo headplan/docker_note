@@ -20,7 +20,7 @@
   * [使用Docker Hub中的镜像](cao-zuo-jing-xiang/shi-yong-docker-hub-zhong-de-jing-xiang.md)
 * [组合应用](zu-he-ying-yong.md)
   * [使用Docker Compose管理容器](zu-he-ying-yong/shi-yong-docker-compose-guan-li-rong-qi.md)
-  * 常用的Docker Compose配置项
+  * [常用的Docker Compose配置项](zu-he-ying-yong/chang-yong-de-docker-compose-pei-zhi-xiang.md)
   * 编写Docker Compose项目
   * 应用于服务化开发
 * [案例实践](an-li-shi-jian.md)
