@@ -113,7 +113,7 @@ sudo docker-compose down
 
 **容器命令**
 
-在 Docker Engine 中 , 如果想要查看容器中主进程的输出内容 , 可以使用`docker logs`命令 . 而由于在 Docker Compose 下运行的服务 , 其命名都是由 Docker Compose 自动完成的 , 可以直接使用`docker-compose logs`命令来完成这项工作 : 
+在 Docker Engine 中 , 如果想要查看容器中主进程的输出内容 , 可以使用`docker logs`命令 . 而由于在 Docker Compose 下运行的服务 , 其命名都是由 Docker Compose 自动完成的 , 可以直接使用`docker-compose logs`命令来完成这项工作 :
 
 ```
 sudo docker-compose logs nginx
