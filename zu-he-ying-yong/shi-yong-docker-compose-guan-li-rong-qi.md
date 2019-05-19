@@ -93,7 +93,7 @@ Docker Compose 配置文件里可以包含许多内容 , 从每个容器的各�
 
 最常使用的 Docker Compose 命令 , 可能是`docker-compose up`和`docker-compose down`
 
-`docker-compose up`命令类似于 Docker Engine 中的`docker run`, 它会根据 docker-compose.yml 中配置的内容 , 创建所有的容器、网络、数据卷等等内容 , 并将它们启动 . 与`docker run`一样 , 默认情况下`docker-compose up`会在“前台”运行 , 可以用`-d`选项使其“后台”运行 . 通常都会加上`-d`选项 . 
+`docker-compose up`命令类似于 Docker Engine 中的`docker run`, 它会根据 docker-compose.yml 中配置的内容 , 创建所有的容器、网络、数据卷等等内容 , 并将它们启动 . 与`docker run`一样 , 默认情况下`docker-compose up`会在“前台”运行 , 可以用`-d`选项使其“后台”运行 . 通常都会加上`-d`选项 .
 
 ```
 sudo docker-compose up -d
@@ -104,6 +104,14 @@ sudo docker-compose up -d
 ```
 sudo docker-compose -f ./compose/docker-compose.yml -p myapp up -d
 ```
+
+`docker-compose down`命令用于停止所有的容器 , 并将它们删除 , 同时消除网络等配置内容 , 也就是几乎将这个Docker Compose项目的所有影响从 Docker 中清除 . 
+
+```
+sudo docker-compose down
+```
+
+**容器命令**
 
 
 
