@@ -105,13 +105,27 @@ sudo docker-compose up -d
 sudo docker-compose -f ./compose/docker-compose.yml -p myapp up -d
 ```
 
-`docker-compose down`命令用于停止所有的容器 , 并将它们删除 , 同时消除网络等配置内容 , 也就是几乎将这个Docker Compose项目的所有影响从 Docker 中清除 . 
+`docker-compose down`命令用于停止所有的容器 , 并将它们删除 , 同时消除网络等配置内容 , 也就是几乎将这个Docker Compose项目的所有影响从 Docker 中清除 .
 
 ```
 sudo docker-compose down
 ```
 
 **容器命令**
+
+在 Docker Engine 中 , 如果想要查看容器中主进程的输出内容 , 可以使用`docker logs`命令 . 而由于在 Docker Compose 下运行的服务 , 其命名都是由 Docker Compose 自动完成的 , 可以直接使用`docker-compose logs`命令来完成这项工作 : 
+
+```
+sudo docker-compose logs nginx
+```
+
+在`docker-compose logs`衔接的是 Docker Compose 中所定义的服务的名称 . 同理 , 在 Docker Compose 还有几个类似的命令可以单独控制某个或某些服务 . 通过`docker-compose create` , `docker-compose start`和`docker-compose stop`可以实现与`docker create`, `docker start`和`docker stop`相似的效果 , 只不过操作的对象由 Docker Engine 中的容器变为了 Docker Compose 中的服务
+
+```
+$ sudo docker-compose create webapp
+$ sudo docker-compose start webapp
+$ sudo docker-compose stop webapp
+```
 
 
 
