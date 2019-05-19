@@ -22,7 +22,7 @@
   * [使用Docker Compose管理容器](zu-he-ying-yong/shi-yong-docker-compose-guan-li-rong-qi.md)
   * [常用的Docker Compose配置项](zu-he-ying-yong/chang-yong-de-docker-compose-pei-zhi-xiang.md)
   * [编写Docker Compose项目](zu-he-ying-yong/bian-xie-docker-compose-xiang-mu.md)
-  * 应用于服务化开发
+  * [应用于服务化开发](zu-he-ying-yong/ying-yong-yu-fu-wu-hua-kai-fa.md)
 * [案例实践](an-li-shi-jian.md)
   * 搭建Java Web项目运行环境
 * [镜像](jingxiang.md)

@@ -87,5 +87,11 @@ Docker Compose 配置文件里可以包含许多内容 , 从每个容器的各�
 
 看看 services 这块 , 这是整个 docker-compose.yml 的核心部分 , 其定义了容器的各项细节 .
 
-在 Docker Compose 里不直接体现容器这个概念 , 这是把 service 作为配置的最小单元 . 虽然看上去每个 service 里的配置内容就像是在配置容器 , 但其实 service 代表的是一个应用集群的配置 . 每个 service 定义的内容 , 可以通过特定的配置进行水平扩充 , 将同样的容器复制数份形成一个容器集群 . 而 Docker Compose 能够对这个集群做到黑盒效果 , 让其他的应用和容器无法感知它们的具体结构 . 
+在 Docker Compose 里不直接体现容器这个概念 , 这是把 service 作为配置的最小单元 . 虽然看上去每个 service 里的配置内容就像是在配置容器 , 但其实 service 代表的是一个应用集群的配置 . 每个 service 定义的内容 , 可以通过特定的配置进行水平扩充 , 将同样的容器复制数份形成一个容器集群 . 而 Docker Compose 能够对这个集群做到黑盒效果 , 让其他的应用和容器无法感知它们的具体结构 .
+
+**停止和启动**
+
+最常使用的 Docker Compose 命令 , 可能是`docker-compose up`和`docker-compose down`
+
+`docker-compose up`命令类似于 Docker Engine 中的`docker run`, 它会根据 docker-compose.yml 中配置的内容 , 创建所有的容器、网络、数据卷等等内容 , 并将它们启动 . 与`docker run`一样 , 默认情况下`docker-compose up`会在“前台”运行 , 可以用`-d`选项使其“后台”运行 . 通常都会加上`-d`选项 . 
 
