@@ -94,7 +94,31 @@ networks:
         - subnet: 10.10.1.0/24
 ```
 
-这里定义了网络驱动的类型 , 并指定了子网的网段 . 
+这里定义了网络驱动的类型 , 并指定了子网的网段 .
+
+**使用网络别名**
+
+可以为服务单独设置网络别名 , 在其他容器里 , 将这个别名作为网络地址进行访问 . 
+
+```yaml
+## ......
+  database:
+    networks:
+      backend:
+        aliases:
+          - backend.database
+## ......
+  webapp:
+    networks:
+      backend:
+        aliases:
+          - backend.webapp
+      frontend:
+        aliases:
+          - frontend.webapp
+## ......
+
+```
 
 
 
