@@ -94,16 +94,16 @@ services:
 
 #### 自定义镜像
 
-相比较于MySQL、Redis这样可以通过简单配置即可直接使用的镜像不同 , PHP的镜像中缺乏了一些程序中必要的元素 , 而这些部分还是推荐使用自定义镜像的方式将它们加入其中 . 
+相比较于MySQL、Redis这样可以通过简单配置即可直接使用的镜像不同 , PHP的镜像中缺乏了一些程序中必要的元素 , 而这些部分还是推荐使用自定义镜像的方式将它们加入其中 .
 
-比如例子中 , 因为需要让 PHP 连接到 MySQL 数据库中 , 所以要为镜像中的 PHP 程序安装和开启 pdo\_mysql 扩展 . 在Docker Hub 中php的镜像简介页面 , 可以找到 PHP 镜像中已经准备好的扩展的安装和启用命令 . 
+比如例子中 , 因为需要让 PHP 连接到 MySQL 数据库中 , 所以要为镜像中的 PHP 程序安装和开启 pdo\_mysql 扩展 . 在Docker Hub 中php的镜像简介页面 , 可以找到 PHP 镜像中已经准备好的扩展的安装和启用命令 .
 
 编写构建 PHP 镜像的 Dockerfile 文件
 
 ```Dockerfile
 FROM php:7.2-fpm
 
-MAINTAINER You Ming <youming@funcuter.org>
+MAINTAINER YuAn <YuAn@lartisan.cn>
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends cron
