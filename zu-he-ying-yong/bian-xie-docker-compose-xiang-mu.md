@@ -145,5 +145,5 @@ exec "$@"
 
 #### 编写辅助脚本
 
-Docker Compose简化了许多操作流程 , 但是还是需要使用docker-compose命令来管理项目 .
+Docker Compose简化了许多操作流程 , 但是还是需要使用docker-compose命令来管理项目 . 
 
