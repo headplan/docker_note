@@ -165,7 +165,15 @@ root=$(cd `dirname $0`; dirname `pwd`)
 docker-compose -p website -f ${root}/compose/docker-compose.yml "$@"
 ```
 
-脚本把一些共性的东西包含进去 , 不必每次传入这些参数或选项 , 同时脚本还能自适应调用的目录 , 准确找到docker-compose.yml文件 , 方便直接调用 . 
+脚本把一些共性的东西包含进去 , 不必每次传入这些参数或选项 , 同时脚本还能自适应调用的目录 , 准确找到docker-compose.yml文件 , 方便直接调用 .
 
+通过脚本操作项目的命令是这样的 : 
 
+```
+$ sudo ./bin/compose up -d
+$ sudo ./bin/compose logs nginx
+$ sudo ./bin/compose down
+```
+
+当然 , 还可以编写像代码部署、服务重启等脚本 , 来提高开发效率 . 
 
