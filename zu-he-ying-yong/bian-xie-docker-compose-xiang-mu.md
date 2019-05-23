@@ -165,7 +165,7 @@ root=$(cd `dirname $0`; dirname `pwd`)
 docker-compose -p website -f ${root}/compose/docker-compose.yml "$@"
 ```
 
-
+脚本把一些共性的东西包含进去 , 不必每次传入这些参数或选项 , 同时脚本还能自适应调用的目录 , 准确找到docker-compose.yml文件 , 方便直接调用 . 
 
 
 
