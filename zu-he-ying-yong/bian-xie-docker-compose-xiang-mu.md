@@ -86,10 +86,38 @@ services:
       - "80:80"
 ```
 
-项目中直接采用了MySQL、Redis和Nginx三个官方镜像 , 而对于PHP-FPM的镜像 , 需要增加一些功能 , 所以通过Dockerfile构建的方式来生成 . 
+项目中直接采用了MySQL、Redis和Nginx三个官方镜像 , 而对于PHP-FPM的镜像 , 需要增加一些功能 , 所以通过Dockerfile构建的方式来生成 .
 
-对于MySQL来说 , 需要为其设置密码 . 原则上是需要对其进行改造并生成新的镜像来使用的 , 而由于MySQL镜像可以通过之前在镜像使用方法一节所提到的环境变量配置的方式 , 来直接指定MySQL的密码及其他一些关键性内容 , 所以就无须单独构建镜像 , 可以直接采用官方镜像并配合使用环境变量来达到目的 . 
+对于MySQL来说 , 需要为其设置密码 . 原则上是需要对其进行改造并生成新的镜像来使用的 , 而由于MySQL镜像可以通过之前在镜像使用方法一节所提到的环境变量配置的方式 , 来直接指定MySQL的密码及其他一些关键性内容 , 所以就无须单独构建镜像 , 可以直接采用官方镜像并配合使用环境变量来达到目的 .
 
-对于 Redis 来说 , 出于安全考虑 , 一样需要设置密码 . Redis设置密码的方法是通过配置文件来完成的 , 所以需要修改Redis的配置文件并挂载到Redis容器中 . 这个过程也相对简单 , 不过需要注意的是 , 在官方提供的Redis镜像里 , 默认的启动命令是redis-server , 其并没有指定加载配置文件 . 所以在定义Redis容器时 , 要使用command配置修改容器的启动命令 , 使其读取挂载到容器的配置文件 .   
+对于 Redis 来说 , 出于安全考虑 , 一样需要设置密码 . Redis设置密码的方法是通过配置文件来完成的 , 所以需要修改Redis的配置文件并挂载到Redis容器中 . 这个过程也相对简单 , 不过需要注意的是 , 在官方提供的Redis镜像里 , 默认的启动命令是redis-server , 其并没有指定加载配置文件 . 所以在定义Redis容器时 , 要使用command配置修改容器的启动命令 , 使其读取挂载到容器的配置文件 .
+
+#### 自定义镜像
+
+相比较于MySQL、Redis这样可以通过简单配置即可直接使用的镜像不同 , PHP的镜像中缺乏了一些程序中必要的元素 , 而这些部分还是推荐使用自定义镜像的方式将它们加入其中 . 
+
+比如例子中 , 因为需要让 PHP 连接到 MySQL 数据库中 , 所以要为镜像中的 PHP 程序安装和开启 pdo\_mysql 扩展 . 在Docker Hub 中php的镜像简介页面 , 可以找到 PHP 镜像中已经准备好的扩展的安装和启用命令 . 
+
+编写构建 PHP 镜像的 Dockerfile 文件
+
+```Dockerfile
+FROM php:7.2-fpm
+
+MAINTAINER You Ming <youming@funcuter.org>
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends cron
+
+RUN docker-php-ext-install pdo_mysql
+
+COPY docker-entrypoint.sh /usr/local/bin/
+
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+
+CMD ["php-fpm"]
+```
+
 
 
