@@ -145,5 +145,27 @@ exec "$@"
 
 #### 编写辅助脚本
 
-Docker Compose简化了许多操作流程 , 但是还是需要使用docker-compose命令来管理项目 . 
+Docker Compose简化了许多操作流程 , 但是还是需要使用docker-compose命令来管理项目 .
+
+启动项目
+
+```
+sudo docker-compose -p website up -d
+```
+
+> 执行的目录必须是docker-compose.yml文件所在的目录 , 这样才能正确地读取Docker Compose项目的配置内容 .
+
+编写脚本简化docker-compose的操作命令
+
+```bash
+#!/bin/bash
+
+root=$(cd `dirname $0`; dirname `pwd`)
+
+docker-compose -p website -f ${root}/compose/docker-compose.yml "$@"
+```
+
+
+
+
 
