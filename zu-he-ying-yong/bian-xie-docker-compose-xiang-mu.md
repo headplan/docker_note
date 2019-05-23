@@ -119,7 +119,7 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["php-fpm"]
 ```
 
-由于 Docker 官方所提供的镜像比较精简 , 这里添加了cron定时任务 . 还拷入到镜像中一个脚本文件 , 并将其作为 ENTRYPOINT 启动入口 . 这个文件的作用主要是为了启动 cron 服务 , 以便在容器中可以正常使用它 . 
+由于 Docker 官方所提供的镜像比较精简 , 这里添加了cron定时任务 . 还拷入到镜像中一个脚本文件 , 并将其作为 ENTRYPOINT 启动入口 . 这个文件的作用主要是为了启动 cron 服务 , 以便在容器中可以正常使用它 .
 
 **docker-entrypoint.sh**
 
@@ -131,7 +131,7 @@ service cron start
 exec "$@"
 ```
 
-在docker-entrypoint.sh里 , 除了启动cron服务的命令外 , 在脚本的最后看到的是`exec "$@"`这行命令 . 
+在docker-entrypoint.sh里 , 除了启动cron服务的命令外 , 在脚本的最后看到的是`exec "$@"`这行命令 .
 
-`$@`是 shell 脚本获取参数的符号 , 这里获得的是所有传入脚本的参数 , 而exec是执行命令 , 直接执行这些参数 . 
+`$@`是 shell 脚本获取参数的符号 , 这里获得的是所有传入脚本的参数 , 而exec是执行命令 , 直接执行这些参数 . 就是之前操作镜像中提到的把CMD参数当做命令代理到脚本中执行 . 
 
