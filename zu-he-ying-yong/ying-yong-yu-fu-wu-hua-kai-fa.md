@@ -46,11 +46,19 @@ services:
 
 #### 跨主机网络
 
-在Docker Compose的小节里 , 介绍了可以通过设置网络别名\( alias \)的方式来更轻松地连接其他容器 , 如果在服务化开发里也能这么做就能减少很多烦琐操作了 . 
+在Docker Compose的小节里 , 介绍了可以通过设置网络别名\( alias \)的方式来更轻松地连接其他容器 , 如果在服务化开发里也能这么做就能减少很多烦琐操作了 .
 
-要实现设置网络别名的目的 , 自然要先确保所有涉及的容器位于同一个网络中 , 这时候就需要引出之前在网络小节里说到的Overlay网络了 . 
+要实现设置网络别名的目的 , 自然要先确保所有涉及的容器位于同一个网络中 , 这时候就需要引出之前在网络小节里说到的Overlay网络了 .
 
 ![](/assets/overlay.png)
 
 Overlay Network 能够跨越物理主机的限制 , 让多个处于不同 Docker daemon 实例中的容器连接到同一个网络 , 并且让这些容器感觉这个网络与其他类型的网络没有区别 . 
+
+**Docker Swarm**
+
+要搭建Overlay Network网络 , 要用到Docker Swarm这个工具 . Docker Swarm 是 Docker 内置的集群工具 , 它能够帮助我们更轻松地将服务部署到 Docker daemon 的集群之中 . 
+
+![](/assets/swarm.png)
+
+
 
