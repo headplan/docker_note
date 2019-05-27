@@ -93,9 +93,9 @@ To add a manager to this swarm, run the following command:
 sudo docker network create --driver overlay --attachable mesh
 ```
 
-在创建 Overlay 网络时 , 要加入`--attachable`选项以便不同机器上的 Docker 容器能够正常使用到它 . 
+在创建 Overlay 网络时 , 要加入`--attachable`选项以便不同机器上的 Docker 容器能够正常使用到它 .
 
-在创建了这个网络之后 , 可以在任何一个加入到集群的 Docker 实例上使用`docker network ls`查看一下其下的网络列表 : 
+在创建了这个网络之后 , 可以在任何一个加入到集群的 Docker 实例上使用`docker network ls`查看一下其下的网络列表 :
 
 ```bash
 $ sudo docker network ls
@@ -105,5 +105,13 @@ y89bt74ld9l8        mesh                overlay             swarm
 ## ......
 ```
 
+修改Docker Compose的定义 , 让它使用这个上面已经定义好的网络 , 而不是再重新创建网络 : 
 
+```
+networks:
+  mesh:
+    external: true
+```
+
+在开发中就使整个服务都处于一个可以使用别名映射网络中 , 避免了要对不同功能联调时切换服务 IP 的烦琐流程 . 在这种结构下 , 只需要让开发人员的Docker退出和加入不同的集群 , 就能马上做到切换不同联调项目 . 
 
