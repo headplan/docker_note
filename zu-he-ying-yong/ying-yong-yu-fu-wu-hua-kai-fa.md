@@ -52,13 +52,27 @@ services:
 
 ![](/assets/overlay.png)
 
-Overlay Network 能够跨越物理主机的限制 , 让多个处于不同 Docker daemon 实例中的容器连接到同一个网络 , 并且让这些容器感觉这个网络与其他类型的网络没有区别 . 
+Overlay Network 能够跨越物理主机的限制 , 让多个处于不同 Docker daemon 实例中的容器连接到同一个网络 , 并且让这些容器感觉这个网络与其他类型的网络没有区别 .
 
 **Docker Swarm**
 
-要搭建Overlay Network网络 , 要用到Docker Swarm这个工具 . Docker Swarm 是 Docker 内置的集群工具 , 它能够帮助我们更轻松地将服务部署到 Docker daemon 的集群之中 . 
+要搭建Overlay Network网络 , 要用到Docker Swarm这个工具 . Docker Swarm 是 Docker 内置的集群工具 , 它能够帮助我们更轻松地将服务部署到 Docker daemon 的集群之中 .
 
-![](/assets/swarm.png)
+![](/assets/swarm.png)Docker Swarm 最初是独立的项目 , 不过目前已经集成到了 Docker 之中 , 通过 docker CLI 的命令就能够直接操控 . 
+
+对于 Docker Swarm 来说 , 每一个 Docker daemon 的实例都可以成为集群中的一个节点 , 而在 Docker daemon 加入到集群成为其中的一员后 , 集群的管理节点就能对它进行控制 . 要搭建的 Overlay 网络正是基于这样的集群实现的 . 
+
+在任意一个 Docker 实例上都可以通过`docker swarm init`来初始化集群 : 
+
+```
+sudo docker swarm init
+
+Swarm initialized: current node (t4ydh2o5mwp5io2netepcauyl) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-4dvxvx4n7magy5zh0g0de0xoues9azekw308jlv6hlvqwpriwy-cb43z26n5jbadk024tx0cqz5r 192.168.1.5:2377
+```
 
 
 
