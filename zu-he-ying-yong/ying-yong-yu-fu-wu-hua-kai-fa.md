@@ -58,11 +58,11 @@ Overlay Network 能够跨越物理主机的限制 , 让多个处于不同 Docker
 
 要搭建Overlay Network网络 , 要用到Docker Swarm这个工具 . Docker Swarm 是 Docker 内置的集群工具 , 它能够帮助我们更轻松地将服务部署到 Docker daemon 的集群之中 .
 
-![](/assets/swarm.png)Docker Swarm 最初是独立的项目 , 不过目前已经集成到了 Docker 之中 , 通过 docker CLI 的命令就能够直接操控 . 
+![](/assets/swarm.png)Docker Swarm 最初是独立的项目 , 不过目前已经集成到了 Docker 之中 , 通过 docker CLI 的命令就能够直接操控 .
 
-对于 Docker Swarm 来说 , 每一个 Docker daemon 的实例都可以成为集群中的一个节点 , 而在 Docker daemon 加入到集群成为其中的一员后 , 集群的管理节点就能对它进行控制 . 要搭建的 Overlay 网络正是基于这样的集群实现的 . 
+对于 Docker Swarm 来说 , 每一个 Docker daemon 的实例都可以成为集群中的一个节点 , 而在 Docker daemon 加入到集群成为其中的一员后 , 集群的管理节点就能对它进行控制 . 要搭建的 Overlay 网络正是基于这样的集群实现的 .
 
-在任意一个 Docker 实例上都可以通过`docker swarm init`来初始化集群 : 
+在任意一个 Docker 实例上都可以通过`docker swarm init`来初始化集群 :
 
 ```
 sudo docker swarm init
@@ -72,6 +72,25 @@ Swarm initialized: current node (t4ydh2o5mwp5io2netepcauyl) is now a manager.
 To add a worker to this swarm, run the following command:
 
     docker swarm join --token SWMTKN-1-4dvxvx4n7magy5zh0g0de0xoues9azekw308jlv6hlvqwpriwy-cb43z26n5jbadk024tx0cqz5r 192.168.1.5:2377
+```
+
+在集群初始化后 , 这个 Docker 实例就自动成为了集群的管理节点 , 而其他 Docker 实例可以通过运行`docker swarm join`命令来加入集群 . 加入到集群的节点默认为普通节点 , 如果要以管理节点的身份加入到集群中 , 可以通过`docker swarm join-token`命令来获得管理节点的加入命令 . 
+
+```
+$ sudo docker swarm join-token manager
+To add a manager to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-60am9y6axwot0angn1e5inxrpzrj5d6aa91gx72f8et94wztm1-7lz0dth35wywekjd1qn30jtes 192.168.1.5:2377
+```
+
+通过这些命令来建立用于服务开发的 Docker 集群 , 并将其他 Docker 加入到这个集群里 , 就完成了搭建跨主机网络的第一步 . 
+
+**建立跨主机网络**
+
+建立 Overlay 网络
+
+```
+sudo docker network create --driver overlay --attachable mesh
 ```
 
 
