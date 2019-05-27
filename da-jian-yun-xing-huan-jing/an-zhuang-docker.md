@@ -87,9 +87,9 @@ docker info # 查看Docker Engine相关信息
 
 #### 配置国内镜像
 
-因为Docker提供的中央镜像仓库太慢 , 这里配置使用Docker提供的国内镜像 , 国内镜像仓库也有很多其他的 , 比如 , DaoCloud和阿里云等 . 
+因为Docker提供的中央镜像仓库太慢 , 这里配置使用Docker提供的国内镜像 , 国内镜像仓库也有很多其他的 , 比如 , DaoCloud和阿里云等 .
 
-修改json文件 , 不存在直接创建 . 
+修改json文件 , 不存在直接创建 .
 
 ```
 /etc/docker/daemon.json
@@ -98,7 +98,7 @@ docker info # 查看Docker Engine相关信息
 ```
 {
     "registry-mirrors": [
-        "https://registry.docker-cn.com"
+        "https://mirror.ccs.tencentyun.com"
     ]
 }
 ```
@@ -109,5 +109,5 @@ docker info # 查看Docker Engine相关信息
 sudo systemctl restart docker
 ```
 
-使用docker info查看Registry Mirrors是否存在 . 
+使用docker info查看Registry Mirrors是否存在 .
 
