@@ -14,6 +14,8 @@ docker info
 
 可以看到正在运行的 Docker Engine 实例中运行的容器数量 , 存储的引擎等等 .
 
+---
+
 #### 查看镜像列表
 
 **查看镜像、容器、数据卷所占用空间**
@@ -72,6 +74,37 @@ docker images -f label=com.example.version=0.1
 ```
 docker images --format "{{.ID}}: {{.Repository}}"
 docker images --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"
+```
+
+---
+
+#### 镜像操作
+
+**获取镜像**
+
+```
+docker pull [选项] [Docker Registry地址]<仓库名>:<标签>
+docker pull ubuntu
+docker pull openresty/openresty:1.13.6.2-alpine
+```
+
+**镜像搜索**
+
+```
+docker search mysql
+```
+
+**镜像删除**
+
+```
+docker rmi mysql
+docker rmi a339c66710f6
+```
+
+**查看容器/镜像详细信息数据**
+
+```
+docker inspect mysql
 ```
 
 
