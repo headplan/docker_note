@@ -31,13 +31,11 @@ docker images -f dangling=true
 docker rmi $(docker images -q -f dangling=true)
 ```
 
-**列出中间层镜像**
+**列出中间层镜像\(所有镜像,包括中间层\)**_\(为了加速镜像构建,重复利用资源,docker会利用中间层镜像\)_
 
 ```
 docker images -a
 ```
-
-
 
 ```
 # 列出部分镜像
