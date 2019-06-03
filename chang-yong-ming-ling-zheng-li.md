@@ -37,11 +37,16 @@ docker rmi $(docker images -q -f dangling=true)
 docker images -a
 ```
 
+**列出部分镜像**
+
 ```
-# 列出部分镜像
 docker images ubuntu
 docker images ubuntu:16.04
+```
 
+
+
+```
 # 显示镜像ID列表
 docker images -q
 # 过滤镜像
