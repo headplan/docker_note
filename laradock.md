@@ -75,24 +75,26 @@ http://localhost
   * Mailu
   * Mailhog
   * MailDev
-* **Log Management:**
+* **Log Management\(日志管理\):**
   * GrayLog
-* **Testing:**
+* **Testing\(测试\):**
   * Selenium
-* **Monitoring:**
+* **Monitoring\(监控\):**
   * Grafana
   * NetData
-* **Search Engines:**
+* **Search Engines\(搜索引擎\):**
   * ElasticSearch
   * Apache Solr
   * Manticore Search
-* **IDE’s**
+* **IDE’s\(编辑器\)**
   * ICE Coder
   * Theia
   * Web IDE
-* **Miscellaneous:**
+* **Miscellaneous\(其他\):**
   * Workspace:
     _\(Laradock container that includes a rich set of pre-configured useful tools\)_
+    _\(Laradock容器包含一组预置的有用的工具\)_
+
     * `PHP CLI`
     * `Composer`
     * `Git`
@@ -109,6 +111,7 @@ http://localhost
     * `SOAP`
     * `Drush`
     * `Wordpress CLI`
+
   * Apache ZooKeeper
     _\(Centralized service for distributed systems to a hierarchical key-value store\)_
   * Kibana
