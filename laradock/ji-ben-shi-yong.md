@@ -13,11 +13,23 @@
 
 a\) 已经有项目存在
 
-
+```
+git submodule add https://github.com/Laradock/laradock.git
+# tree
+project-a
+-- laradock-a
+project-b
+-- laradock-b
+```
 
 b\) 还没有创建项目
 
-
+```
+git clone https://github.com/laradock/laradock.git
+# tree
+laradock
+project-dev
+```
 
 **多个项目的设置**
 
