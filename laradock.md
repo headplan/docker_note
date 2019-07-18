@@ -30,17 +30,17 @@ http://localhost
 
 #### 支持的软件
 
-* **Web Servers:**
+* **Web Servers\(Web服务器\):**
 * * NGINX
   * Apache2
   * Caddy
-* **Load Balancers:**
+* **Load Balancers\(负载均衡器\):**
   * HAProxy
   * Traefik
-* **PHP Compilers:**
+* **PHP Compilers\(PHP编译器\):**
   * PHP FPM
   * HHVM
-* **Database Management Systems:**
+* **Database Management Systems\(数据库管理系统\):**
   * MySQL
   * PostgreSQL
     * PostGIS
@@ -52,18 +52,18 @@ http://localhost
   * Neo4j
   * CouchDB
   * RethinkDB
-* **Database Management Apps:**
+* **Database Management Apps\(数据库管理应用\):**
   * PhpMyAdmin
   * Adminer
   * PgAdmin
-* **Cache Engines:**
+* **Cache Engines\(缓存引擎\):**
   * Redis
     * Redis Web UI
     * Redis Cluster
   * Memcached
   * Aerospike
   * Varnish
-* **Message Brokers:**
+* **Message Brokers\(消息队列\):**
   * RabbitMQ
     * RabbitMQ Admin Console
   * Beanstalkd
@@ -71,7 +71,7 @@ http://localhost
   * Eclipse Mosquitto
   * PHP Worker
   * Laravel Horizon
-* **Mail Servers:**
+* **Mail Servers\(邮件服务器\):**
   * Mailu
   * Mailhog
   * MailDev
