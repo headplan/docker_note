@@ -91,8 +91,9 @@ http://localhost
   * Theia
   * Web IDE
 * **Miscellaneous\(其他\):**
-  * Workspace:
-    _\(Laradock container that includes a rich set of pre-configured useful tools\)_
+
+  * **Workspace:**  
+    _\(Laradock container that includes a rich set of pre-configured useful tools\)_  
     _\(Laradock容器包含一组预置的有用的工具\)_
 
     * `PHP CLI`
@@ -112,45 +113,46 @@ http://localhost
     * `Drush`
     * `Wordpress CLI`
 
-  * Apache ZooKeeper
+  * **Apache ZooKeeper**  
     _\(Centralized service for distributed systems to a hierarchical key-value store\)_
-  * Kibana
+
+  * **Kibana**
     _\(Visualize your Elasticsearch data and navigate the Elastic Stack\)_
-  * LogStash
+  * **LogStash**
     _\(Server-side data processing pipeline that ingests data from a multitude of sources simultaneously\)_
-  * Jenkins
+  * **Jenkins**
     _\(automation server, that provides plugins to support building, deploying and automating any project\)_
-  * Certbot
+  * **Certbot**
     _\(Automatically enable HTTPS on your website\)_
-  * Swoole
+  * **Swoole**
     _\(Production-Grade Async programming Framework for PHP\)_
-  * SonarQube
+  * **SonarQube**
     _\(continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs and more\)_
-  * Gitlab
+  * **Gitlab**
     _\(A single application for the entire software development lifecycle\)_
-  * PostGIS
+  * **PostGIS**
     _\(Database extender for PostgreSQL. It adds support for geographic objects allowing location queries to be run in SQL\)_
-  * Blackfire
+  * **Blackfire**
     _\(Empowers all PHP developers and IT/Ops to continuously verify and improve their app’s performance\)_
-  * Laravel Echo
+  * **Laravel Echo**
     _\(Bring the power of WebSockets to your Laravel applications\)_
-  * Phalcon
+  * **Phalcon**
     _\(A PHP web framework based on the model–view–controller pattern\)_
-  * Minio
+  * **Minio**
     _\(Cloud storage server released under Apache License v2, compatible with Amazon S3\)_
-  * AWS EB CLI
+  * **AWS EB CLI**
     _\(CLI that helps you deploy and manage your AWS Elastic Beanstalk applications and environments\)_
-  * Thumbor
+  * **Thumbor**
     _\(Photo thumbnail service\)_
-  * IPython
+  * **IPython**
     _\(Provides a rich architecture for interactive computing\)_
-  * Jupyter Hub
+  * **Jupyter Hub**
     _\(Jupyter notebook for multiple users\)_
-  * Portainer
+  * **Portainer**
     _\(Build and manage your Docker environments with ease\)_
-  * Docker Registry
+  * **Docker Registry**
     _\(The Docker Registry implementation for storing and distributing Docker images\)_
-  * Docker Web UI
+  * **Docker Web UI**
     _\(A browser-based solution for browsing and modifying a private Docker registry\)_
 
 
