@@ -53,9 +53,9 @@ project-2
 cp env-example .env
 ```
 
-可以直接编辑.env文件 , 配置应用 , 这些env中的变量都会在docker-compose.yml文件中使用 . 
+可以直接编辑.env文件 , 配置应用 , 这些env中的变量都会在docker-compose.yml文件中使用 .
 
-根据操作系统不同或项目需求不同 , 还需要配置env的一些值 : 
+根据操作系统不同或项目需求不同 , 还需要配置env的一些值 :
 
     ###########################################################
     ###################### General Setup ######################
@@ -93,14 +93,17 @@ cp env-example .env
     COMPOSE_FILE=docker-compose.yml
 
     # Change the separator from : to ; on Windows
+    # Windows系统需要修改分隔符为;分号
     COMPOSE_PATH_SEPARATOR=:
 
     # Define the prefix of container names. This is useful if you have multiple projects that use laradock to have seperate containers per project.
+    # 定义容器名称前缀,如果跑了多个laradock的话,这个很有用
     COMPOSE_PROJECT_NAME=laradock
 
     ### PHP Version ###########################################
 
     # Select a PHP version of the Workspace and PHP-FPM containers (Does not apply to HHVM). Accepted values: 7.3 - 7.2 - 7.1 - 7.0 - 5.6
+    # 选择工作区和PHP-FPM容器的PHP版本,不包括HHVM的.支持7.3,7.2,7.1,7.0,5.6
     PHP_VERSION=7.2
 
     ### Phalcon Version ###########################################
