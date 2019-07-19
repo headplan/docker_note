@@ -109,6 +109,7 @@ cp env-example .env
     ### Phalcon Version ###########################################
 
     # Select a Phalcon version of the Workspace and PHP-FPM containers (Does not apply to HHVM). Accepted values: 3.4.0+
+    # 选择工作区和PHP-FPM容器的Phalcon版本,不包括HHVM的.支持3.4.0+
     PHALCON_VERSION=3.4.1
 
     ### PHP Interpreter #######################################
