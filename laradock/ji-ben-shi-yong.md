@@ -115,31 +115,37 @@ cp env-example .env
     ### PHP Interpreter #######################################
 
     # Select the PHP Interpreter. Accepted values: hhvm - php-fpm
+    # 选择PHP解释器.支持hhvm,php-fpm
     PHP_INTERPRETER=php-fpm
 
     ### Docker Host IP ########################################
 
     # Enter your Docker Host IP (will be appended to /etc/hosts). Default is `10.0.75.1`
+    # 设置Docker主机的IP(会追加到/etc/hosts).默认10.0.75.1
     DOCKER_HOST_IP=10.0.75.1
 
     ### Remote Interpreter ####################################
 
     # Choose a Remote Interpreter entry matching name. Default is `laradock`
+    # 选择与名称匹配的远程解释器.默认laradock
     PHP_IDE_CONFIG=serverName=laradock
 
     ### Windows Path ##########################################
 
     # A fix for Windows users, to ensure the application path works
+    # Windows用户的修复程序,用来确保应用程序路径正常工作
     COMPOSE_CONVERT_WINDOWS_PATHS=1
 
     ### Environment ###########################################
 
     # If you need to change the sources (i.e. to China), set CHANGE_SOURCE to true
+    # 如果需要更改来源(即,中国),请设置为true
     CHANGE_SOURCE=false
 
     ### Docker Sync ###########################################
 
     # If you are using Docker Sync. For `osx` use 'native_osx', for `windows` use 'unison', for `linux` docker-sync is not required
+    # 如果使用的是Docker Sync.OSX用native_osx,Windows用unison,Linux不变
     DOCKER_SYNC_STRATEGY=native_osx
 
 
