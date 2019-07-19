@@ -20,7 +20,7 @@ docker rm $(docker ps -a -q)
 docker image -a
 
 # 删除所有镜像
-docker rmi $(docker images -q) 
+docker rmi $(docker images -q)
 ```
 
 **列出当前项目运行的容器**
@@ -41,6 +41,14 @@ docker-compose stop {容器名称}
 
 # 删除所有容器,使用该命令要小心,因为它会删除数据容器.
 docker-compose down
+```
+
+**进入容器**
+
+```
+# 列出正在运行的容器
+docker ps
+# docker-compose exec {container-name} bash
 ```
 
 
