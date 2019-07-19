@@ -29,4 +29,5 @@
 * [常用命令整理](chang-yong-ming-ling-zheng-li.md)
 * [Laradock](laradock.md)
   * [基本使用](laradock/ji-ben-shi-yong.md)
+  * [详细配置](laradock/qi-ta-ying-yong.md)
 
