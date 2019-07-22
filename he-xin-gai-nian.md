@@ -29,6 +29,9 @@ docker rmi (docker images -q -f dangling=true)
 # Go模板自定义列表
 docker images --format "{{.ID}}: {{.Repository}}"
 docker images --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"
+
+
+https://www.cnblogs.com/quanxiaoha/p/10542278.html
 ```
 
 #### 镜像操作

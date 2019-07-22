@@ -116,8 +116,9 @@ http://localhost
   * **Apache ZooKeeper**  
     _\(Centralized service for distributed systems to a hierarchical key-value store\)_
 
-  * **Kibana**
+  * **Kibana**  
     _\(Visualize your Elasticsearch data and navigate the Elastic Stack\)_
+
   * **LogStash**
     _\(Server-side data processing pipeline that ingests data from a multitude of sources simultaneously\)_
   * **Jenkins**
