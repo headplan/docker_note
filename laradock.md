@@ -119,8 +119,9 @@ http://localhost
   * **Kibana**  
     _\(Visualize your Elasticsearch data and navigate the Elastic Stack\)_
 
-  * **LogStash**
+  * **LogStash**  
     _\(Server-side data processing pipeline that ingests data from a multitude of sources simultaneously\)_
+
   * **Jenkins**
     _\(automation server, that provides plugins to support building, deploying and automating any project\)_
   * **Certbot**
