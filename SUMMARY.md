@@ -7,6 +7,7 @@
 * [搭建运行环境](da-jian-yun-xing-huan-jing.md)
   * [安装Docker](da-jian-yun-xing-huan-jing/an-zhuang-docker.md)
   * [Docker Desktop](da-jian-yun-xing-huan-jing/docker-desktop.md)
+  * [安装Docker Compose](da-jian-yun-xing-huan-jing/an-zhuang-docker-compose.md)
 * [使用容器](he-xin-gai-nian.md)
   * [镜像与容器](he-xin-gai-nian/jing-xiang-yu-rong-qi.md)
   * [从镜像仓库获得镜像](he-xin-gai-nian/cong-jing-xiang-cang-ku-huo-de-jing-xiang.md)
