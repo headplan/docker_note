@@ -29,6 +29,7 @@
 * [镜像](jingxiang.md)
 * [常用命令整理](chang-yong-ming-ling-zheng-li.md)
 * [Laradock](laradock.md)
+  * [安装](laradock/an-zhuang.md)
   * [基本使用](laradock/ji-ben-shi-yong.md)
   * [详细配置](laradock/qi-ta-ying-yong.md)
     * [容器操作](laradock/qi-ta-ying-yong/rong-qi-cao-zuo.md)

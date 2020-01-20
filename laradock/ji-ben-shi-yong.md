@@ -68,7 +68,7 @@ cp env-example .env
     APP_CODE_PATH_HOST=../
 
     # Point to where the `APP_CODE_PATH_HOST` should be in the container
-    # 即代码目录与容易中/var/www的映射目录
+    # 即代码目录与容器中/var/www的映射目录
     APP_CODE_PATH_CONTAINER=/var/www
 
     # You may add flags to the path `:cached`, `:delegated`. When using Docker Sync add `:nocopy`
