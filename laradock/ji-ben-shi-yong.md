@@ -148,5 +148,11 @@ cp env-example .env
     # 如果使用的是Docker Sync.OSX用native_osx,Windows用unison,Linux不变
     DOCKER_SYNC_STRATEGY=native_osx
 
+**执行命令创建环境**
+
+```
+docker-compse up -d nginx mysql redis
+```
+
 
 
