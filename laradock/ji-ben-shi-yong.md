@@ -151,7 +151,7 @@ cp env-example .env
 **执行命令创建环境**
 
 ```
-docker-compse up -d nginx mysql redis
+docker-compose up -d nginx mysql redis
 ```
 
 

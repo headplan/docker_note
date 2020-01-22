@@ -65,6 +65,12 @@ $ sudo groupadd docker
 $ sudo usermod -aG docker $USER
 ```
 
+退出当前用户登陆状态 , 然后重新登录 , 以便让权限生效或重启docker-daemon
+
+```
+sudo systemctl restart docker
+```
+
 ---
 
 #### 上手使用
